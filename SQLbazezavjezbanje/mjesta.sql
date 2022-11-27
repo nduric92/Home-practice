@@ -1,3 +1,7 @@
+# c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\djuki\Documents\GitHub\Home-practice\SQLbazezavjezbanje\mjesta.sql
+
+
+
 drop database if exists mjesta;
 create database mjesta character set utf8;
 use mjesta;
