@@ -136,5 +136,3 @@ order by e.haljina desc;
 select vesta, asocijalno from decko a
 inner join decko_zarucnica b on a.sifra = b.decko 
 where b.decko = null;
-
-#sat vremena
