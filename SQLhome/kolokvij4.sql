@@ -77,3 +77,35 @@ alter table zena_mladic add foreign key (mladic) references mladic(sifra);
 alter table snasa add foreign key (zena) references zena(sifra);
 alter table becar add foreign key (snasa) references snasa(sifra);
 alter table prijatelj add foreign key (becar) references becar(sifra);
+
+
+insert into mladic  (vesta)
+values
+('duks'),
+('adidas'),
+('puma');
+
+insert into zena (suknja,prstena)
+values
+('uska crvena',3),
+('siroka crvena',6),
+('plava svila',4);
+
+insert into zena_mladic (zena,mladic)
+values
+(1,1),
+(2,1),
+(3,2);
+
+insert  into snasa (haljina,zena)
+values
+('plava',3),
+('crvena',1),
+('zuta',2);
+
+insert into becar (kratkamajica,bojaociju,snasa)
+values
+('puma','plava',2),
+('nike','smedja',3),
+('adidas','zelena',1);
+
