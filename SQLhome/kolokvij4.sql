@@ -109,3 +109,23 @@ values
 ('nike','smedja',3),
 ('adidas','zelena',1);
 
+update punac set majica = 'Osijek' where sifra > 0;
+
+delete from prijatelj where prstena > 17;
+
+select haljina from snasa where treciputa is null;
+
+select a.nausnica, f.jmbag , e.kratkamajica 
+from mladic a 
+inner join zena_mladic b on a.sifra =b.mladic 
+inner join zena c on b.zena = c.sifra 
+inner join snasa d on c.sifra = d.zena 
+inner join becar e on e.snasa = d.sifra 
+inner join  prijatelj f on e.sifra = f.becar
+where d.treciputa is null and c.lipa !=29
+order by becar desc ;
+
+select a.lipa, a.prstena
+from zena a
+inner join zena_mladic b on a.sifra = b.zena 
+where b.sifra is null;
