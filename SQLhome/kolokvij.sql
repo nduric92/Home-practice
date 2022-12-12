@@ -2,6 +2,7 @@ drop database if exists kolokvij;
 create database kolokvij;
 use kolokvij;
 
+#kolokvij7
 #c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\djuki\Documents\GitHub\Home-practice\SQLhome\kolokvij.sql
 
 create table punica(
