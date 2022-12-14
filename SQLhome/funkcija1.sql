@@ -4,7 +4,7 @@
 delimiter $$
 create function prvizadatak() returns int
 begin
-	return FLOOR(RAND(980-5098));
+	return FLOOR( RAND() * (5098-980) + 980);
 end;
 $$
 delimiter ;
