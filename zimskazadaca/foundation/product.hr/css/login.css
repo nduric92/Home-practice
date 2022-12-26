@@ -1,0 +1,13 @@
+.login{
+    
+    border: 1px outset royalblue;
+    border-radius: 10px;
+    width: 50%;
+    height: 70%;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: rgb(244, 244, 244);
+    float: initial;
+}
