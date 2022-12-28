@@ -20,9 +20,4 @@
         </form>
     </div>
 
-
- 
-
-
-
-login forma
+    <?php include_once 'podnozje.php'; ?>
