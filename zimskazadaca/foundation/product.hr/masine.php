@@ -1,19 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
-    <?php include_once 'head.php'; ?>
+    <?php include_once 'head.php'; ?>   
   </head>
 <body>
-
-    <div class="grid-container">      
-      <?php include_once 'izbornik.php'; ?>        
+    <div class="grid-container">
+      <?php require_once 'izbornik.php'; ?>
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="callout" id="tijelo">
+          slike i opisi masina na kojima se izvode radnje
+          </div>
+        </div>
+        <?php include_once 'podnozje.php'; ?>
+      </div>
     </div>
-
-
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+   <?php include_once 'jskripte.php'; ?>
   </body>
 </html>
-masine slike i opisi

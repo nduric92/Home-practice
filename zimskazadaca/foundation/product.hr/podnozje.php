@@ -1,0 +1,1 @@
+<hr> &copy; <?php echo date('Y'); ?> Plast Product
