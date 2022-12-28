@@ -9,7 +9,7 @@
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout" id="tijelo">
-          o tvrtki
+          o nama
           </div>
         </div>
         <?php include_once 'podnozje.php'; ?>
