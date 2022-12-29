@@ -1,3 +1,49 @@
 #tijelo{
-    min-height: 400px;
+    min-height: 600px;
+}
+
+.indexslika1{
+    float: left;
+    width: 50%;
+    height:560px;
+    background-image: url(../volvo.jpg);
+    background-size: 100% 100%;
+}
+
+.indextext{
+    float: right;
+    width: 45%;
+    height: 560px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 1px 1px rgb(157, 154, 154);    
+}
+
+.indexslika2{
+    float: left;
+    width: 50%;
+    height:560px;
+    background-image: url(../produkt.jpeg);
+    background-size: 100% 100%;
+}
+
+.onamaslika1{
+    float: left;
+    width: 100%;
+    height:560px;
+    background-image: url(../productplast.jpg);
+    background-size: 100% 100%;
+}
+
+.onamatext{
+    width: 80%;
+    margin: 10%;
+    height: 560px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 1px 1px rgb(157, 154, 154);    
 }
