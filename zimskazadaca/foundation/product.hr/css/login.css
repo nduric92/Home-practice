@@ -1,9 +1,9 @@
 .login{
     border-radius: 10px;
-    width: 32%;
+    width: 600px;
     min-height: 350px;
     text-align: center;
-    margin: 34%;
+    margin: auto;
     margin-top: 10%;
     margin-bottom: 10%;
     background-color: rgb(244, 244, 244);    
