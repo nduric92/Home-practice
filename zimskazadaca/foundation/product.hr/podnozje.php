@@ -1,1 +1,1 @@
-<hr> &copy; <?php echo date('Y'); ?> Plast Product
+<hr><h6 style="color: white;"> &copy; <?php echo date('Y'); ?> Plast Product

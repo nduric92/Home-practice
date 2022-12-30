@@ -1,11 +1,10 @@
 .login{
-    
-    border: 1px dashed royalblue;
     border-radius: 10px;
-    width: 350px;
-    height: 350px;
+    width: 32%;
+    min-height: 350px;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 2%;
+    margin: 34%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     background-color: rgb(244, 244, 244);    
 }

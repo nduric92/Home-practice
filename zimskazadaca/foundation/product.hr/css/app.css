@@ -1,9 +1,11 @@
 body{
-    background-color: rgb(76, 76, 76);
+    background-image: url(../masine/body1.webp);
+    background-size: 100%;
+    background-color: black;
 }
 
 #tijelo{
-    min-height: 600px;
+    min-height: fit-content;
     background-color: white;
 }
 
@@ -12,18 +14,11 @@ body{
     background-color: rgb(216, 220, 162);
 }
 
-.indexslika1{
-    float: left;
-    width: 50%;
-    height:560px;
-    background-image: url(../volvo.jpg);
-    background-size: 100% 100%;
-}
-
 .indextext{
+    margin: auto;
     float: right;
-    width: 45%;
-    height: 560px;
+    width: 30%;
+    height: fit-content;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     text-align: center;
@@ -39,18 +34,10 @@ body{
     background-size: 100% 100%;
 }
 
-.onamaslika1{
-    float: left;
-    width: 100%;
-    height:560px;
-    background-image: url(../productplast.jpg);
-    background-size: 100% 100%;
-}
-
 .onamatext{
-    width: 80%;
+    width:80%;
     margin: 10%;
-    height: 560px;
+    height: fit-content;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     text-align: center;
@@ -60,79 +47,34 @@ body{
 
 #panel1{
     margin: auto;
-    width: 600px;
-    height: 400px;
-    text-align: center;
+    width: 600px
 }
 
 #panel2{
     margin: auto;
-    width: 600px;
-    height: 400px;
-    text-align: center;
+    width: 600px
 }
 
 #panel3{
     margin: auto;
-    width: 600px;
-    height: 400px;
-    text-align: center;
+    width: 600px
 }
 
 #panel4{
     margin: auto;
-    width: 600px;
-    height: 400px;
-    text-align: center;
+    width: 600px
 }
 
 #panel5{
     margin: auto;
-    width: 600px;
-    height: 400px;
-    text-align: center;
+    width: 600px
+  
 }
 
 #panel6{
     margin: auto;
-    width: fit-content;
+    width: 600px;
     height: fit-content;
-    text-align: center;
-}
-
-#proces1{
-    background-image: url(../proces/proces1.jpg);
-    background-size:  100% 100%;
-    width: 100%;
-    height: 100%;
-}
-
-#proces2{
-    background-image: url(../proces/proces2.jpg);
-    background-size:  100% 100%;
-    width: 100%;
-    height: 100%;
-}
-
-#proces3{
-    background-image: url(../proces/proces3.jpg);
-    background-size:  100% 100%;
-    width: 100%;
-    height: 100%;
-}
-
-#proces4{
-    background-image: url(../proces/proces4.jpg);
-    background-size:  100% 100%;
-    width: 100%;
-    height: 100%;
-}
-
-#proces5{
-    background-image: url(../proces/procesgif.gif);
-    background-size:  100% 100%;
-    width: 100%;
-    height: 100%;
 }
 
 #procesp{
@@ -140,3 +82,4 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
+

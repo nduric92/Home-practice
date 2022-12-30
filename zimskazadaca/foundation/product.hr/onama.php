@@ -9,8 +9,7 @@
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout" id="tijelo">
-            <div class="onamaslika1">
-            </div>
+              <img src="productplast.jpg" alt="">            
           </div>
         </div>
       </div>

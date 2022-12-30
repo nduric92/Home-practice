@@ -21,29 +21,24 @@
 
               <div class="tabs-content" data-tabs-content="example-tabs">
                 <div class="tabs-panel is-active" id="panel1">    
-                  <div id="proces1">
-                  </div>
+                <img class="thumbnail" src="proces/proces1.jpg" alt="">
                 </div>
                 <div class="tabs-panel" id="panel2">
-                  <div id="proces2">
-                  </div>
+                <img class="thumbnail" src="proces/proces2.jpg" alt="">
                 </div>
                 <div class="tabs-panel" id="panel3">
-                  <div id="proces3">
-                  </div>
+                <img class="thumbnail" src="proces/proces3.jpg" alt="">
                 </div>
                 <div class="tabs-panel" id="panel4">
-                  <div id="proces4">
-                  </div>
+                <img class="thumbnail" src="proces/proces4.jpg" alt="">
                 </div>
                 <div class="tabs-panel" id="panel5">
-                  <div id="proces5">
-                  </div>
+                <img class="thumbnail" src="proces/procesgif.gif" alt="">
                 </div>
                 <div class="tabs-panel" id="panel6">
-                  <div id="proces6">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/crAx1aKPDsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
+                  
+                  <iframe width="415" height="315" src="https://www.youtube.com/embed/crAx1aKPDsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  
                 </div>
               </div>
           </div>
