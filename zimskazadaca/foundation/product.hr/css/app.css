@@ -83,3 +83,12 @@ body{
     text-align: center;
 }
 
+.thumbnail2{
+    position: relative 150px;
+    width: 450px;
+    min-height: 350px;
+}
+
+#indexslika{
+    width: fit-content;
+}
