@@ -8,10 +8,10 @@
 
     <div class="login">
         <form class="log-in-form">
-            <h4 class="text-center">Log in with you email account</h4>
+            <h4 class="text-center">Log in with you email account</h4><br>
             <label>Email
                 <input type="email" placeholder="somebody@example.com">
-            </label>
+            </label><br>
             <label>Password
                 <input type="password" placeholder="Password">
             </label>

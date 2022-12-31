@@ -1,10 +1,10 @@
 .login{
     border-radius: 10px;
-    width: 60%;
-    min-height: 350px;
     text-align: center;
-    margin: auto;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 60%;
     background-color: rgb(244, 244, 244);    
 }

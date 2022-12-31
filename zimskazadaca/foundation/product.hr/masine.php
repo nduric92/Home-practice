@@ -13,26 +13,26 @@
 
             <h1 style="text-align:center;">Masine za izradu i obradu dijelova</h1>
           <div class="grid-x grid-margin-x">
-            <div class="cell small-4">
-              <img class="thumbnail2" src="masine/geiss.jpg" alt="Photo of Uranus.">
+            <div class="cell small-12">
+              <img class="thumbnail" src="masine/geiss.jpg" alt="">
             </div>
-            <div class="cell small-4">
-              <img class="thumbnail2" src="masine/geiss2.jpg" alt="Photo of Neptune.">
+            <div class="cell small-12">
+              <img class="thumbnail" src="masine/geiss2.jpg" alt="">
             </div>
-            <div class="cell small-4">
-              <img class="thumbnail2" src="masine/cnc.jpg" alt="Photo of Pluto.">
+            <div class="cell small-12">
+              <img class="thumbnail" src="masine/cnc.jpg" alt="">
             </div>
           </div>
 
           <div class="grid-x grid-margin-x">
-            <div class="cell small-4">
-              <img class="thumbnail2" src="masine/multicam.jpg" alt="Photo of Uranus.">
+            <div class="cell small-12">
+              <img class="thumbnail" src="masine/multicam.jpg" alt="">
             </div>
-            <div class="cell small-4">
-              <img class="thumbnail2" src="masine/sawblade.jpg" alt="Photo of Neptune.">
+            <div class="cell small-12">
+              <img class="thumbnail" src="masine/sawblade.jpg" alt="">
             </div>
-            <div class="cell small-4">
-              <img class="thumbnail2" src="masine/cms.jpg" alt="Photo of Pluto.">
+            <div class="cell small-12">
+              <img class="thumbnail" src="masine/cms.jpg" alt="">
             </div>
           </div>
 

@@ -37,7 +37,7 @@
                 </div>
                 <div class="tabs-panel" id="panel6">
                   
-                  <iframe width="415" height="315" src="https://www.youtube.com/embed/crAx1aKPDsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="fit-content" height="auto" src="https://www.youtube.com/embed/crAx1aKPDsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   
                 </div>
               </div>

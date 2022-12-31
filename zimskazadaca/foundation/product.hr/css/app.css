@@ -47,34 +47,22 @@ body{
 
 #panel1{
     margin: auto;
-    width: 600px
 }
 
 #panel2{
     margin: auto;
-    width: 600px
 }
 
 #panel3{
     margin: auto;
-    width: 600px
 }
 
 #panel4{
     margin: auto;
-    width: 600px
 }
 
 #panel5{
     margin: auto;
-    width: 600px
-  
-}
-
-#panel6{
-    margin: auto;
-    width: 600px;
-    height: fit-content;
 }
 
 #procesp{
@@ -91,4 +79,13 @@ body{
 
 #indexslika{
     width: fit-content;
+}
+
+.thumbnailm{
+    width: 350px;
+    align-content: center;
+}
+
+.plast{
+    width: 100%;
 }

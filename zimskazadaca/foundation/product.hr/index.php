@@ -4,12 +4,24 @@
     <?php include_once 'head.php'; ?>   
   </head>
 <body>
+
+<div class="grid-container">
+      <?php require_once 'izbornik.php'; ?>
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+                    
+        <img class="plast" src="proces/pp.jpg" alt="">                   
+        
+      </div>
+    </div>
+  </div>
+
   <div class="grid-container">
       <?php require_once 'izbornik.php'; ?>
     <div class="grid-x grid-padding-x">
       <div class="large-12 cell">
-        <div class="callout" id="tijelo">  
-          <div class="media-object stack-for-small">
+        <div class="callout" id="tijelo">            
+          <div class="media-object stack-for-small">            
             <div class="media-object-section">
               <div class="thumbnail">
                 <img class="indexslika" src="volvo.jpg" alt="">
