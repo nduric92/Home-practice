@@ -9,7 +9,6 @@
             <div class="row">
                 <img src="slike/pp.jpg" alt="" height="300px"> 
                     <?php include_once 'navbar.php'; ?><br> 
-                    
             </div>
             
             <div class="accordion accordion-flush" id="accordionFlushExample">                
@@ -92,19 +91,8 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-              
-
-
-
-
         </div>    
     </div>
-
-
 
     <div class="container">
         <div class="container text-center">

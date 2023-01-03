@@ -20,16 +20,8 @@
               Od naših tipičnih proizvoda možemo spomenuti ploče za automobile: autobuse, kamione, građevinske strojeve i prenamjenu automobila. Industrija rashladnih sredstava: Rashladna oprema za komercijalne kuhinje, rashladne jedinice i druge srodne industrije. Pomoćni proizvodi: Razna pomagala za osobe s invaliditetom, kao što su invalidska kolica, skuteri, dizala. Displej: Razne fronte / paneli za strojeve i strojeve unutar maloprodaje.
               </figcaption>
             </figure>
-            
-              
-
-
-
-
         </div>    
     </div>
-
-
 
     <div class="container">
         <div class="container text-center" style="background-color:darkgrey;">
