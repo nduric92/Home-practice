@@ -1,14 +1,17 @@
+body{
+    background-color: black;
+}
+
 .grid{
     margin:auto;
-    max-width: 1024px;
-    border: outset 2px black;
+    max-width: 1080px;
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#333;
+    background-color:rgb(55, 55, 55);
     color: white;
 }
 
@@ -39,7 +42,8 @@
 }
 
 .toggle-button {
-    top: .75rem;
+    position: absolute;
+    top: 1rem;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -49,7 +53,7 @@
 }
 
 .toggle-button .bar{
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color: white;
     border-radius: 10px;
