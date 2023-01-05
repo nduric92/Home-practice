@@ -5,7 +5,12 @@ body{
 .grid{
     margin:auto;
     max-width: 1080px;
+    background-color: rgb(107, 182, 157);
 }
+
+/*---------*/
+/* nav bar */
+/*_________*/
 
 .navbar{
     display: flex;
@@ -85,4 +90,19 @@ body{
         display: flex;
     }
     
+}
+
+/*==========*/
+/* div text */
+/*==========*/
+
+.text1 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.slikaindex {
+    border: 0;
+    padding: 0;
 }
