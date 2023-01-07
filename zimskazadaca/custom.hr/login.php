@@ -58,7 +58,7 @@
                         <!-- sub container for the checkbox and forgot password link -->
                         <div class="subcontainer">
                             <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                            <input type="checkbox" checked="checked" name="remember">Remember me
                             </label>
                             <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
                         </div>
@@ -68,14 +68,11 @@
                         <button type="submit">Login</button>
 
                         <!-- Sign up link -->
-                        <p class="register">Not a member?  <a href="#">Register here!</a></p>
-
+                        <p class="register">Not a member?<a href="#">Register here!</a></p>
                     </div>
-
                 </form>
             </div>
-
-
+            
         </div>
         <script src="custom.js"></script>
     </body>
