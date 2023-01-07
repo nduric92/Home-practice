@@ -1,0 +1,1 @@
+<hr style="width:90%;"><h6 style="color: white;"> &copy; <?php echo date('Y'); ?> Plast Product
