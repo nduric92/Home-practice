@@ -33,6 +33,9 @@
             <div class="large-6 medium-6 small-12 cell">
                 <img src="slike/pp.jpg" alt="" style="width: 100%; max-height: 300px; object-fit:cover;">
             </div>
+
+<!-- PROIZVODI POCETAK-->
+
         </div>
         <script src="custom.js"></script>
     </body>
