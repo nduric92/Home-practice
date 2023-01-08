@@ -34,7 +34,25 @@
                 <img src="slike/pp.jpg" alt="" style="width: 100%; max-height: 300px; object-fit:cover;">
             </div>
 
-<!-- PROIZVODI POCETAK-->
+                <!-- PROIZVODI POCETAK-->
+
+                <h3 style="font-size: 20px; color: white;text-align: center;">Neki od proizvoda Product Plast</h3>
+                <div class="row">
+                    <div class="column" style="background-size: 100% 100%; background-image: url(slike/vme1.jpg);">
+                        <h2>VME 128</h2>
+                    </div>
+                    <div class="column" style="background-size: 100% 100%; background-image: url(slike/vme2.jpg);">
+                        <h2>VME 242</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column" style="background-size: 100% 100%; background-image: url(slike/vme3.jpg);">
+                        <h2>VME 333</h2>
+                    </div>
+                    <div class="column" style="background-size: 100% 100%; background-image: url(slike/vme4.jpg);">
+                        <h2>VME 136</h2>
+                    </div>
+                </div>
 
         </div>
         <script src="custom.js"></script>

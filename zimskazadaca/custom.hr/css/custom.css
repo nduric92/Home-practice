@@ -209,3 +209,32 @@ span.forgotpsd a {
       width: 20rem;
     }
 }
+
+/*============*/
+/* Proizvodi  */
+/*============*/
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+  margin: none;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
