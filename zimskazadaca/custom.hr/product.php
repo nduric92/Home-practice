@@ -53,8 +53,9 @@
                         <h2>VME 136</h2>
                     </div>
                 </div>
-
         </div>
         <script src="custom.js"></script>
+        
+        <?php include_once 'podnozje.php'; ?>
     </body>
 </html>
