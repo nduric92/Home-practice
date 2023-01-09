@@ -238,3 +238,25 @@ span.forgotpsd a {
   box-sizing: border-box;
 }
 
+/*============*/
+/* Menadzment */
+/*============*/
+
+.men {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 500px; 
+  }
+  
+  .menadz:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .men {
+      width: 100%;
+    }
+  }
