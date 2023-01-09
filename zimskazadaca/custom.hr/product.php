@@ -53,9 +53,14 @@
                         <h2>VME 136</h2>
                     </div>
                 </div>
-        </div>
-        <script src="custom.js"></script>
-        
+
+                <div class="text1">
+                Industrija rashladnih sredstava: Rashladna oprema za komercijalne kuhinje, rashladne jedinice i druge srodne industrije.<hr style="width:80%">
+                Pomoćni proizvodi: Razna pomagala za osobe s invaliditetom, kao što su invalidska kolica, skuteri, dizala.<br>***
+                </div>
+                
         <?php include_once 'podnozje.php'; ?>
+        </div>
+        <script src="custom.js"></script>        
     </body>
 </html>
