@@ -247,21 +247,66 @@ span.forgotpsd a {
     width: 33.33%;
     padding: 10px;
     height: 500px; 
-  }
+}
   
-  .menadz:after {
+.menadz:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
  
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .men {
       width: 100%;
     }
-  }
+}
 
 /*====================*/
 /* Proces proizvodnje */
 /*====================*/
 
+.proces2 {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+  
+.proces {margin: 0 -5px;}
+  
+.proces:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+@media screen and (max-width: 800px) {
+    .proces2 {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+.procard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.proces3 {
+    margin: auto;
+}
+  
+.proces3:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.video {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
