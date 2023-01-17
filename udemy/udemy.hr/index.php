@@ -54,9 +54,50 @@ $kolegij=['Matematika' => 5, 'Fizika' => 3, 'Racunalstvo' => 4, 'Informatika' =>
 foreach($kolegij as $predmet => $ocijena){
     echo 'Predmet ' . $predmet . ' je ocjenjen ' . $ocijena . ' ocjenom <br>';
 }
+echo '<hr>';
 
 
+//-------------------------//
+//multidimenizolani nizovi //
+//_________________________//
 
+$cars=  [
+        'Skuplji'=> ['Audi', 'Bmw', 'Mercedes'], 
+        'Jeftiniji'=> ['Volvo','Toyota','Ford']
+        ];{
+            echo $cars ['Skuplji'][0];
+}
+
+echo '<hr>';
+
+//-----------//
+// Operatori //
+//___________//
+
+
+$broj = 5%2;
+    echo $broj;
+
+    echo '<br>';
+
+$i=5;
+echo $i++;
+echo '<br>';
+echo $i;
+
+echo '<hr>';
+
+$i = 5;
+$i = $i + 5;
+echo $i; //10
+
+$i=5;
+$i+=$i; 
+echo $i; //10
+
+$i=5;
+$i++;
+echo $i;//6
 
 
 
