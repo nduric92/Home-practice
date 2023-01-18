@@ -12,7 +12,8 @@
           <li><a href="index.php">Pocetna index</a>
             <ul class="submenu menu vertical" data-submenu>
             <li><a href="ifstatment.php">IF statment</a></li>
-            <li><a href="loop.php">While/do while/for/foreach loop</a></li>                        
+            <li><a href="loop.php">While/do while/for/foreach loop</a></li>
+            <li><a href="Functions.php">Functions</a></li>                        
 </ul>
 
 
