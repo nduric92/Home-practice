@@ -8,7 +8,16 @@
 </head>
 <body>
 
+<ul class="submenu menu vertical" data-submenu>
+          <li><a href="">gledaj dalje</a>
+            <ul class="submenu menu vertical" data-submenu>
+            <li><a href="ifstatment.php">IF statment</a></li>
+            <li><a href="loop.php">While/do while/for/foreach loop</a></li>
+            <li><a href="#">nesto trece</a></li>                        
+</ul>
+<hr>
 <?php 
+
 
 //asocijativni nizovi associative arrays
 
@@ -99,6 +108,22 @@ $i=5;
 $i++;
 echo $i;//6
 
+echo '<br>';
+
+$i=2; $j=0; $k=1;
+
+$i += $k++ + --$j;  // k 2  j -1   i 2
+$k = $i + $j;       //i2  j-1 k2
+echo $i + --$j;     // 
+
+echo '<br>';
+
+
+$i=2; $j=1; $k=1;
+
+$i += $k++ + --$j;  //k2 j0 i2
+$k = $i + $j;       //i2 j0
+echo $i + --$j;     //
 
 
 
