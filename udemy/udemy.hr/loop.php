@@ -98,6 +98,115 @@ foreach($names as $key) {
 
 }
 
+echo '<hr>';
+echo '<hr>';
+//========//
+//PRACTICE//
+//========//
+
+$x =19;
+$y =10;
+
+if ($x<=$y){
+    echo 'x je manje ili jednak ' . $y . '<br>';
+    echo 'x je ' . $x . '<br>';
+}else{
+    echo 'x je veci od ' . $y . '<br>';
+    echo 'x je ' . $x;
+}
+
+echo '<hr>';
+
+//  SWITCH  //
+$x=5;
+
+switch($x){
+    case 1:
+        echo 'Vukovar';
+        break;
+    case 2:
+        echo 'Kristiansand';
+        break;
+    case 3:
+        echo 'Novi Sad';
+        break;
+    case 4:
+        echo 'Dubrovnik';
+        break;
+    default:
+        echo 'Gotov si';
+}
+
+// 3
+echo '<hr>';
+
+$score=60;
+
+if($score >=90 && $score <=100){
+    echo 'You have passed the exam with an A' . '<br>'; 
+}elseif ($score >= 80 && $score<89){
+    echo 'yoo have passed the axam with an B' . '<br>';
+}elseif ($score >= 70 && $score<79){
+    echo 'yoo have passed the axam with an C' . '<br>';
+}elseif ($score >= 60 && $score<69){
+    echo 'yoo have passed the axam with an D' . '<br>';
+}else {
+    echo 'You failed the exam';
+}
+
+
+// 4
+echo '<hr>';
+
+$hours = 11000;
+$age = 10;
+$failures = 20;
+
+if($hours>= 10000 || $age >= 12 || $failures >= 25){
+    echo 'Machine has to be replaced';
+    }else {
+        echo 'Machine is still good to work';
+    }
+
+
+// 5
+echo '<hr>';
+
+$year = 2023;
+
+if ($year % 400 ==0 || $year % 4 == 0){
+    echo $year . ' is a leap year';
+} else {
+    echo $year . ' is not a leap year';
+}
+
+// 6
+echo '<hr>';
+
+$x=1;
+$y=15;
+
+while($x <= $y){
+    $multiple = $x * $y;
+    echo $x . ' * ' . $y . ' is ' . $multiple . '<br>';
+    $x++;
+}
+
+// 7
+echo '<hr>';
+
+$num1 = 0;
+$num2 = 1;
+$counter =0;
+
+while($counter < 11){
+    echo ' ' . $num1;
+    $num3 = $num2 + $num1;
+    $num1 = $num2;
+    $num2 = $num3;
+    $counter++ ;
+    echo '<br>';
+}
 
 
 
