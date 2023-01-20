@@ -13,6 +13,7 @@
             <ul class="submenu menu vertical" data-submenu>
             <li><a href="ifstatment.php">IF statment</a></li>
             <li><a href="loop.php">While/do while/for/foreach loop</a></li>
+            <li><a href="ciklicna.php">ciklicna</a></li>
             <li><a href="Functions.php">Functions</a></li>                       
 </ul>
 
@@ -78,7 +79,36 @@ for($years = 1; $years<=5; $years++){
     echo $years . $deposit . '<br>';
 }
 
+echo '<hr>';
+echo '<hr>';
+echo '<hr>';
 
+$n=5;
+$m=5;
+$matrica =[];
+
+$n=isset($_GET['prvi'])?$_GET['prvi']:5;
+$m=isset($_GET['drugi'])?$_GET['drugi']:5;
+
+for($i=0; $i < $n; $i++){
+    $red=[];
+    for($j=0; $j <= $m; $j++){
+        $red[]=$j;
+
+    }$matrica[]=$red;
+}
+
+
+for($i=0; $i<$n; $i++){
+    for($j=1; $j<=$m; $j++){
+        echo $matrica[$i][$j]. ' ';
+    }
+    echo '<br>';
+}
+
+
+echo '<hr>';
+echo '<hr>';
 echo '<hr>';
 //--------------------//
 //   FOREACH loop     //
