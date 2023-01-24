@@ -9,19 +9,120 @@
 <body>
 
 <ul class="submenu menu vertical" data-submenu>
-          <li><a href="index.php">Pocetna index</a>
+          <li><a href="">gledaj dalje</a>
             <ul class="submenu menu vertical" data-submenu>
             <li><a href="ifstatment.php">IF statment</a></li>
             <li><a href="loop.php">While/do while/for/foreach loop</a></li>
-            <li><a href="Functions.php">Functions</a></li>                        
+            <li><a href="functions.php">Functions</a></li>                        
 </ul>
-
-
-<hr>
 <hr>
 
 
-<?php 
+
+<?php
+//Camel case
+//svaku rec posle prve reci stavljamo sa velikim slovom
+//myFunction();
+
+//mala slova
+//sva mala slova sa donjom crtom
+//my_function();
+
+//pascal case
+//sva prva slova velika
+//MyFunction();
+
+//==========================//
+//  Kreiranje prve funkcije //
+//==========================//
+
+function myFunction(){
+  $x = 'Hello';
+  echo $x;
+}
+
+myFunction();
+
+//KORISNA ZA MENE U OVOM FAJLU
+function linija(){
+  echo '<hr>';
+}
+
+linija();
+
+//======================================//
+//  Functions with arguments/paremeters //
+//======================================//
+
+$num1=5;
+$num2=5;
+
+//parametri
+function calculator($num1, $num2 = 20){
+  echo $num1 * $num2;
+}
+
+//arguments - argumenti u samoj funkciji overwritaju varijable koje su navedene iznad same funkcije
+calculator($num1, $num2);
+
+linija();
+
+
+//============================//
+//  funkcije sa return value  //
+//============================//
+
+
+
+$num1 = 10;
+$num2 = 15;
+function add($num1, $num2){
+  echo $num1 + $num2;
+}
+
+add($num1, $num2);
+
+linija();
+
+//drugaciji nacin pomocu return-a 
+$num1 = 10;
+$num2 = 15;
+
+function add1($num1, $num2){
+  $result = $num1 + $num2;
+  return $result;
+}
+
+// - add1($num1, $num2); - ovo ne radi na ovaj nacin nego mora sa echo...
+echo 'Rezultat je ' . add1($num1, $num2); //na ovaj nacin se ispisuje rezultat na stranici
+
+linija();
+
+
+      //------------------//
+      //pass by reference //    
+      //------------------//    //pogledaj razliku izmeju jednog nacina i drugog =>
+
+
+$x = 10;
+
+function addByValue($x){        //samo koristi vrednost varijable x i ne dodaje joj zadanih +=5
+  $x += 5;
+}
+
+function addByReference(&$x){   //uzima vrednost varijable x koja je gore navedena $x=10 i dodaje 10
+  $x+=10;
+}
+
+addByValue($x);
+echo 'The value is ' . $x;    //=10
+
+  linija();
+
+addByReference($x);           
+echo 'The value is ' . $x;    //=20
+
+linija();
 
 
 
@@ -30,3 +131,6 @@
 
 
 ?>
+    
+</body>
+</html>
