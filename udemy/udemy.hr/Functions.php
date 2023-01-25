@@ -124,6 +124,63 @@ echo 'The value is ' . $x;    //=20
 
 linija();
 
+//=================================//
+//  Global and local scope in PHP  //
+//=================================//
+
+$x = 10;
+$y = 20;
+
+function MojaFunkcija1(){
+  echo $y = 20;
+}
+
+// echo $y; //ova ne radi jer nije varijabla definirana
+
+MojaFunkcija1(); //pozivas funkciju u kojoj je definirana varijabla y
+
+linija();
+
+MojaFunkcija1($y);//radi i ovako 
+
+linija();
+linija(); 
+
+//=============//
+//  CONSTANTS  //
+//=============//
+
+// function - define
+//keyword - CONST
+
+//DEFINE//
+
+$companyName = 'Apple';
+$companyName = 'Microsoft';
+
+echo $companyName;    //ispisuje samo Microsoft
+
+linija();
+//konstante UVEK velikim slovom
+define('COMPANY_NAME', 'Apple');
+
+echo COMPANY_NAME;    //Ispisuje - Apple i u echo slucaju se ne upisuje znak dolara ispred
+
+linija();
+
+const MY_NAME = 'Nemanja';    //definira konstantu MY_NAME
+echo MY_NAME;
+
+
+//=======================//
+//  INCLUDING DOCUMENTS  //
+//=======================//
+
+
+
+
+
+
 
 
 
