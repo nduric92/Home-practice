@@ -13,8 +13,12 @@
             <ul class="submenu menu vertical" data-submenu>
             <li><a href="ifstatment.php">IF statment</a></li>
             <li><a href="loop.php">While/do while/for/foreach loop</a></li>
-            <li><a href="functions.php">Functions</a></li>                        
+            <li><a href="functions.php">Functions</a></li>
+            <li><a href="functionsvezba.php">Functions vezba</a></li> 
+            <li><a href="buildinfunctions.php">Build in functions</a></li>
+          </li>
 </ul>
+
 <hr>
 
 
@@ -175,6 +179,19 @@ echo MY_NAME;
 //=======================//
 //  INCLUDING DOCUMENTS  //
 //=======================//
+
+//  include_once 'head.php';    sve ono sto smo radili da razdvajamo footer, header, navbar...
+//  u ovom primeru na udemy stoji samo - include 'head.php' bez once
+
+linija();
+
+//=====================//
+//  REQUIRE DOCUMENTS  //
+//=====================//
+
+//  ako koristimo INCLUDE i ako ga nema, recimo da je put navedem pogresno - na stranici isipisuje warning
+//  ako koristimo REQUIRE i ako ga nema, recimo da je put naveden pogresno - na stranici ispisuje fatal error
+
 
 
 
