@@ -80,16 +80,110 @@ echo strtoupper('what is your name' . '<br>');
 
 echo strtolower('what is your name' . '<br>');
 
+echo '<hr>';
+
 //=============================//
 //  Array build-in functions   //
 //=============================//
 
+//ARRAY FUNCTION
+
+$personalInfo = ['Name' => 'Nemanja', 'Age' => 30, 'City' => 'Vukovar'];
+
+$moreInfo = ['State' => 'Hrvatska', 'Weight' => 88];
+
+$personalInfo = array_merge($personalInfo, $moreInfo);
+foreach($personalInfo as $key => $value){
+    echo $key . ': ' . $value . '<br>';
+}
+
+echo'<hr>';
+
+//print only keys
+print_r(array_keys($personalInfo));
+
+echo 'Print only keys';
+echo'<hr>';
+
+//print only values
+print_r(array_values($personalInfo));
+
+echo 'Print only values';
+echo'<hr>';
+
+//add value in array
+$cars = ['Volkswagen', 'Audi', 'Mercedes'];
+array_push($cars, 'Volvo', 'Toyota');
+
+print_r($cars);
+echo 'dodavanje marke auta u array sa "array_push"' . '<hr>';
+
+//search inside of an array
+echo array_search('Mercedes', $cars);
+echo '<hr>';
+
+//Count the number of items in array
+echo count($cars);
+echo '<hr>';
+echo '<hr>';
+
+//=================================//
+//  Date/time build-in functions   //
+//=================================//
+
+//DATES
+
+//  'd' =   dan
+//  'j' =   dan bez nula
+//  'D' =   dan u nedelji (Mon, Fri...)
+//  'l' =   pun dan u nedelji (Monday...)
+//  'm' =   Mesec kao broj sa nulom ukoliko postoji
+//  'n' =   Mesec kao broj bez nule
+//  'M' =   Mesec tri slova (Jan)
+//  'F' =   Mesec pun naziv (January..)
+//  'y' =   Godina dve znamenke (23)
+//  'Y' =   Godina cetri znamenke (2023)
 
 
+echo date('M');
+echo '<hr>';
 
+echo date('d/m/Y');
+echo '<hr>';
 
+//TIMES
 
+//  'g' =   sati in 12 hour format bez nula
+//  'h' =   sati in 12 hour format sa nulama
+//  'G' =   sati u 24 satnom formatu bez nula
+//  'H' =   sati u 24 satnom formatu sa nulama
+//  'a' =   am/pm malim slovima
+//  'A' =   am/pm velika slova
+//  'i' =   minute bez numfmt_get_locales sekunde bez nula
 
+echo date('H:i:s a');
+
+//funkcija za definiranje timezone
+
+date_default_timezone_set('Europe/Zagreb');
+
+//string to time
+
+$time = strtotime('4:00pm December 03 2022');
+echo '<br>';
+echo $time;
+
+echo '<br>';
+echo date('m/d/Y H:i a', $time);
+
+echo '<hr>';
+//=====================================//
+//  Random number build-in functions   //
+//=====================================//
+
+$min = 10;
+$max = 100;
+echo rand($min,$max);
 
 
 ?>
