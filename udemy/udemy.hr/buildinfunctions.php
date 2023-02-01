@@ -16,6 +16,7 @@
             <li><a href="functions.php">Functions</a></li>
             <li><a href="functionsvezba.php">Functions vezba</a></li> 
             <li><a href="buildinfunctions.php">Build in functions</a></li>
+            <li><a href="superglobals.php">Superglobals</a></li>
           </li>
 </ul>
 <hr>
