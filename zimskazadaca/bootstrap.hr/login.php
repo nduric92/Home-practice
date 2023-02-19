@@ -33,22 +33,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : (isset($_COOKIE['email']) ? $_
                             </div>
 
                             <button type="submit" class="btn btn-outline-success">Login</button>
-                        </form>
-
-                            
-
-
-<!-- 
-
-                            <div class="mb-3 row" style="max-width:400px; margin: auto;">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword">
-                                </div>
-                            </div>  
--->          
-                            
+                        </form>   
                     </figure>
+                    
                     <a href="onama.php" class="link-success" target="_blank" style="font-size:15px">Forgot Password?</a><br><hr>
 
 
