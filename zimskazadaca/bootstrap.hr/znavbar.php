@@ -11,10 +11,10 @@
                         <a class="nav-link" href="zradnici.php">Radnici</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Smjene</a>
+                        <a class="nav-link" href="zsmjene.php">Smjene</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Proizvodi</a>
+                        <a class="nav-link" href="zproizvodi.php">Proizvodi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Proizvodnja</a>

@@ -15,7 +15,8 @@ create table radnik(
 
 create table smjena(
     id int not null primary key auto_increment,
-    naziv varchar(50)    
+    naziv varchar(50),
+    trajanje decimal(18,2)    
 );
 
 create table radnik_smjena(
@@ -34,7 +35,8 @@ create table proizvod(
     id int not null primary key auto_increment,
     naziv varchar(50) not null,
     boja varchar(50),
-    cijena decimal(18,2)
+    cijena decimal(18,2),
+    narucitelj varchar(50)
 );
 
 

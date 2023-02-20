@@ -10,7 +10,7 @@
                 <img src="slike/pp.jpg" alt="" height="300px">      
             </div>
             <?php include_once 'znavbar.php'; ?><br>
-            <h1>Pregled radnika</h1>
+            <h1>Pregled smjena</h1>
             <hr>
 
             <?php 
@@ -24,15 +24,15 @@
 
                     $veza = new PDO($dsn,'root','',$parametri);
 
-                    $radnik = $veza->prepare('select * from radnik');
+                    $smjena = $veza->prepare('select * from smjena');
 
-                    $radnik->execute();
+                    $smjena->execute();
                 
-                    $rs = $radnik->fetchAll();
+                    $rs = $smjena->fetchAll();
 
                     foreach($rs as $red):
                     ?>
-                    <h6><?=$red->ime ?> <?=$red->prezime ?></h1>
+                    <h6><?=$red->naziv ?> <?=$red->trajanje ?></h1>
                     <?php
                     endforeach;
 
@@ -55,7 +55,7 @@
           ?>
           <hr>
 
-          <a href="dodajradnika.php"><button type="button" class="btn btn-success btn-lg">Dodaj novog radnika</button></a>
+          <a href="dodajsmjenu.php"><button type="button" class="btn btn-success btn-lg">Dodaj smjenu</button></a>
 
           <hr>
 

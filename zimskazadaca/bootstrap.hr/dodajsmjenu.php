@@ -1,13 +1,13 @@
 <?php 
 
-if(isset($_POST['ime'])){
+if(isset($_POST['naziv'])){
   require_once 'baza.php';
-  $radnik = $veza->prepare('  
+  $smjena = $veza->prepare('  
     insert into 
-    radnik(ime,prezime) 
-    values (:ime,:prezime);  
+    smjena(naziv,trajanje) 
+    values (:naziv,:trajanje);  
   ');
-  $radnik->execute($_POST);
+  $smjena->execute($_POST);
 }
 
 ?>
@@ -23,19 +23,19 @@ if(isset($_POST['ime'])){
                 <img src="slike/pp.jpg" alt="" height="300px">      
             </div>
             <?php include_once 'znavbar.php'; ?><br>
-            <h1>Dodavanje radnika</h1>
+            <h1>Dodavanje smjene</h1>
             <hr>
 
             <form action="" method="post">
                 
                 <div class="mb-3 row" style="max-width:400px; margin: auto;">
-                    <label for="ime">Ime</label>
-                    <input type="text" class="form-control" name="ime" id="ime">
+                    <label for="naziv">Naziv</label>
+                    <input type="text" class="form-control" name="naziv" id="naziv">
                 </div>
 
                 <div class="mb-3 row" style="max-width:400px; margin: auto;">
-                    <label for="prezime">Prezime</label>
-                    <input type="text" class="form-control" name="prezime" id="prezime">
+                    <label for="trajanje">Trajanje</label>
+                    <input type="text" class="form-control" aria-label="Amount" name="trajanje" id="trajanje">
                 </div>
 <!-- 
                 <div class="mb-3 row" style="max-width:400px; margin: auto;">
@@ -57,14 +57,14 @@ if(isset($_POST['ime'])){
 -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Dodaj Radnika
+                Dodaj Smjenu
                 </button>
 
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Dodavanje radnika</h1>
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Dodavanje smjene</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -87,7 +87,7 @@ if(isset($_POST['ime'])){
             
           <hr>
 
-          <a href="zradnici.php"><button type="button" class="btn btn-success btn-lg">Pogledaj radnike</button></a>
+          <a href="zsmjene.php"><button type="button" class="btn btn-success btn-lg">Pogledaj smjene</button></a>
 
           <hr>
 
