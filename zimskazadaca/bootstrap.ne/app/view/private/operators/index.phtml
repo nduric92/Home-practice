@@ -1,0 +1,28 @@
+<h3>Operators</h3>
+<a href="new"><button type="button" class="btn btn-outline-primary btn-lg">Add new operator</button></a>
+<br>
+***
+<div class="card">
+    <table class="table table-striped">
+    <thead>
+        <tr class="table-warning">
+            <th scope="col">Full name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($data as $d):?>
+            <tr>
+                <td><?=$d->ime?> <?=$d->prezime?></td>
+                <td><?=$d->email?></td>
+                <td><?=$d->role?></td>
+                <td>
+                    <a href="change?id=<?=$d->id?>">Change</a>
+                </td>
+            </tr>
+        <?php endforeach;?>
+    </tbody>
+    </table>
+</div>

@@ -31,7 +31,7 @@ class App
 
         if(!(class_exists($controller) && method_exists($controller,$method)))
         {
-            echo 'Ne postoji ' . $controller . '-&gt;' . $method;
+            echo 'Not exists ' . $controller . '-&gt;' . $method;
             return;
         }
 
@@ -58,6 +58,22 @@ class App
         return $config[$key];
     }
 
+
+    public static function auth()
+    {
+        return isset($_SESSION['auth']);
+    }
+
+    public static function operator()
+    {
+        return $_SESSION['auth']->ime . ' ' . 
+                $_SESSION['auth']->prezime;
+    }
+
+    public static function admin()
+    {
+        return $_SESSION['auth']->role==='admin';
+    }
 
 
 }

@@ -1,0 +1,22 @@
+<div>
+    <h3>Log in</h3>
+    <h5>Enter access data</h5>
+    <figure class="figure">
+        <img src="<?=App::config('url')?>public/img/login.png" class="figure-img img-fluid rounded" alt="..." style="max-width:300px;">
+        
+        <form action="<?=App::config('url');?>login/authorization" method="post">
+
+            <div class="mb-3 row" style="max-width:400px; margin: auto;">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="text" class="form-control" placeholder="someone@something.com" name="email" value="<?=$email?>">
+            </div> 
+
+            <div class="mb-3 row" style="max-width:400px; margin: auto;">
+                <label for="password" class="form-label">Your password</label>
+                <input type="password" class="form-control" placeholder="Enter Password" name="password">
+            </div> 
+                <button type="submit" value="Login" class="btn btn-outline-success" >Login</button>
+                <br><?=$message?>
+        </form>
+    </figure>
+</div>

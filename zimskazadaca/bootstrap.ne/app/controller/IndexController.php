@@ -17,6 +17,21 @@ class IndexController extends Controller
         $this->view->render('aboutus');
     }
 
+    public function login()
+    {
+        $this->view->render('login',[
+            'message'=>'',
+            'email'=>''
+        ]);
+    }
+
+    public function logout()
+    {
+        unset($_SESSION['auth']);
+        session_destroy();/*
+        header('locaton:' . App::config('url'));*/
+        $this->view->render('index');
+    }
 
 
 
