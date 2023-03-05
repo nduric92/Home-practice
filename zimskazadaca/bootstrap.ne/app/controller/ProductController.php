@@ -1,10 +1,24 @@
 <?php
 
-class ProductController  extends AuthorizationController
+
+class ProductController extends AuthorizationController
 {
+    private $viewPath = 'private' . 
+    DIRECTORY_SEPARATOR . 'products' . 
+    DIRECTORY_SEPARATOR;
+
     public function index()
     {
-        $this->view->render('private' . DIRECTORY_SEPARATOR . 
-                'products' . DIRECTORY_SEPARATOR . 'index');
+
+        $products = Product::read();
+        foreach($products as $p){
+            unset($p->products);
+        }
+
+
+        $this->view->render($this->viewPath . 'index',[
+            'data'=>$products
+        ]);
     }
+
 }

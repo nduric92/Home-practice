@@ -12,17 +12,17 @@
             <th scope="col">Action</th>
         </tr>
     </thead>
-    <tbody>
-        <?php foreach($data as $d):?>
-            <tr>
-                <td><?=$d->ime?> <?=$d->prezime?></td>
-                <td><?=$d->email?></td>
-                <td><?=$d->role?></td>
-                <td>
-                    <a href="change?id=<?=$d->id?>">Change</a>
-                </td>
-            </tr>
-        <?php endforeach;?>
-    </tbody>
+        <tbody>
+            <?php foreach($data as $d):?>
+                <tr>
+                    <td><?=$d->ime?> <?=$d->prezime?></td>
+                    <td><?=$d->email?></td>
+                    <td><?=$d->role?></td>
+                    <td>
+                        <a href="change?id=<?=$d->id?>">Change</a>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+        </tbody>
     </table>
 </div>

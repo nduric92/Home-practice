@@ -1,5 +1,5 @@
-<h3>Workers</h3>
-<a href="new"><button type="button" class="btn btn-outline-primary btn-lg">Add new employee</button></a>
+<h3>Products on Shifts</h3>
+<a href="new"><button type="button" class="btn btn-outline-primary btn-lg">Add new</button></a>
 <br>
 ***
 <div class="card">
@@ -7,21 +7,15 @@
     <thead>
         <tr class="table-warning">
             <th scope="col">Name</th>
-            <th scope="col">Surname</th>
-            <th scope="col">oib</th>
-            <th scope="col">Contract</th>
-            <th scope="col">IBAN</th>
+            <th scope="col">Shift</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
         <tbody>
             <?php foreach($data as $d):?>
                 <tr>
-                    <td><?=$d->ime?></td>
-                    <td><?=$d->prezime?></td>
-                    <td><?=$d->oib?></td>
-                    <td><?=$d->brojugovora?></td>
-                    <td><?=$d->iban?></td>
+                    <td><?=$d->radnik?></td>
+                    <td><?=$d->smjena?></td>
                     <td>
                         <a href="change?id=<?=$d->id?>">Change</a>
                     </td>

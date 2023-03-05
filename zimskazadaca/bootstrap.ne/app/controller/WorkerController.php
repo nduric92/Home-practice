@@ -1,10 +1,24 @@
 <?php
 
-class WorkerController  extends AuthorizationController
+
+class WorkerController extends AdminController
 {
+    private $viewPath = 'private' . 
+    DIRECTORY_SEPARATOR . 'workers' . 
+    DIRECTORY_SEPARATOR;
+
     public function index()
     {
-        $this->view->render('private' . DIRECTORY_SEPARATOR . 
-                'workers' . DIRECTORY_SEPARATOR . 'index');
+
+        $workers = Worker::read();
+        foreach($workers as $w){
+            unset($w->password);
+        }
+
+
+        $this->view->render($this->viewPath . 'index',[
+            'data'=>$workers
+        ]);
     }
+
 }

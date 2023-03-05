@@ -2,3 +2,33 @@
 <a href="new"><button type="button" class="btn btn-outline-primary btn-lg">Add new product</button></a>
 <br>
 ***
+<div class="card">
+    <table class="table table-striped">
+    <thead>
+        <tr class="table-warning">
+            <th scope="col">Name</th>
+            <th scope="col">Color</th>
+            <?php if(App::admin()): ?>
+            <th scope="col">Price</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Action</th>
+            <?php endif; ?>
+        </tr>
+    </thead>
+        <tbody>
+            <?php foreach($data as $d):?>
+                <tr>
+                    <td><?=$d->naziv?></td>
+                    <td><?=$d->boja?></td>
+                    <?php if(App::admin()): ?>
+                    <td><?=$d->cijena?></td>
+                    <td><?=$d->narucitelj?></td>
+                    <td>
+                        <a href="change?id=<?=$d->id?>">Change</a>
+                    </td>
+                    <?php endif; ?>
+                </tr>
+            <?php endforeach;?>
+        </tbody>
+    </table>
+</div>
