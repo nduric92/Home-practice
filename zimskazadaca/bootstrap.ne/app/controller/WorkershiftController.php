@@ -10,7 +10,7 @@ class WorkershiftController extends AdminController
     public function index()
     {
 
-        $workershifts = ProductShift::read();
+        $workershifts = WorkerShift::read();
         foreach($workershifts as $ws){
             unset($ws->password);
         }

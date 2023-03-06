@@ -14,7 +14,7 @@
         <tbody>
             <?php foreach($data as $d):?>
                 <tr>
-                    <td><?=$d->radnik?></td>
+                    <td><?=$d->ime?> <?=$d->prezime?></td>
                     <td><?=$d->smjena?></td>
                     <td>
                         <a href="change?id=<?=$d->id?>">Change</a>

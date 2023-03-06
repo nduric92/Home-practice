@@ -17,6 +17,10 @@ insert into operater (ime,prezime,email,password,role)
 values ('Nemanja','Duric','nemanja.duric92@gmail.com',
 '$2a$12$2daYLbps/sG.wr9/mrysmeGtvO1f6ViDqtq4QXun7K1i6Nyw85XPm','oper');
 
+insert into operater (ime,prezime,email,password,role)
+values ('Adam','Adamovic','adam@admin',
+'$2a$12$daOIhiFEtalKWbMW/WfpkOs0DfmsJkpL2SxAwa5dcgj8jpP4.ZbPS','admin');
+
 create table radnik(
     id int not null primary key auto_increment,
     ime varchar(50) not null,
@@ -102,7 +106,7 @@ values
 insert into radnik_smjena(radnik,smjena)
 values
 (1,1),
-(1,2),
+(2,2),
 (3,1),
 (4,1),
 (5,1),

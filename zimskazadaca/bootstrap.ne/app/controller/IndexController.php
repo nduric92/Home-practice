@@ -28,9 +28,8 @@ class IndexController extends Controller
     public function logout()
     {
         unset($_SESSION['auth']);
-        session_destroy();/*
-        header('locaton:' . App::config('url'));*/
-        $this->view->render('index');
+        session_destroy();
+        header('location:' . App::config('url'));
     }
 
 
