@@ -10,7 +10,7 @@ class WorkerShift{
         from radnik a
         inner join radnik_smjena rs on a.id = rs.radnik 
         inner join smjena b on b.id = rs.smjena 
-        order by a.id;
+        order by b.id;
         ');
         $expression->execute();
         return $expression->fetchAll();

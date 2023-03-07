@@ -4,6 +4,8 @@ use proizvodnja;
 
 # c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8mb4 < C:\Users\djuki\Documents\GitHub\Home-practice\zimskazadaca\bootstrap.ne\proizvodnja.sql
 
+alter database persefona_proizvodnja charset utf8mb4;
+
 create table operater(
     id int not null primary key auto_increment,
     ime varchar(50) not null,
@@ -14,11 +16,11 @@ create table operater(
 );
 
 insert into operater (ime,prezime,email,password,role)
-values ('Nemanja','Duric','nemanja.duric92@gmail.com',
-'$2a$12$2daYLbps/sG.wr9/mrysmeGtvO1f6ViDqtq4QXun7K1i6Nyw85XPm','oper');
+values ('Nemanja','Duric','operater@oper.com',
+'$2a$12$724E72m8fTBgl8EaMh31fObUiVMXUtKvgDuWE/XZ41QtX7VAw/tna','oper');
 
 insert into operater (ime,prezime,email,password,role)
-values ('Adam','Adamovic','adam@admin',
+values ('Adam','Adamovic','adam@admin.com',
 '$2a$12$daOIhiFEtalKWbMW/WfpkOs0DfmsJkpL2SxAwa5dcgj8jpP4.ZbPS','admin');
 
 create table radnik(
