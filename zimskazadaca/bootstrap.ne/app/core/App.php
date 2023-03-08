@@ -75,5 +75,10 @@ class App
         return $_SESSION['auth']->role==='admin';
     }
 
+    public static function dev()
+    {
+        return App::config('dev');
+    }
+
 
 }

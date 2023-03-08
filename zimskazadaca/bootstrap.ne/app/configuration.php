@@ -17,7 +17,7 @@ if($dev)
 }else{
     return [
         'dev'=> $dev,
-        'url'=>'https://polaznik24.edunova.hr//',
+        'url'=>'https://polaznik24.edunova.hr/',
         'nameApp'=>'Production',
         'base'=>[
             'dsn'=>'mysql:host=localhost;dbname=persefona_proizvodnja;charset=utf8mb4',

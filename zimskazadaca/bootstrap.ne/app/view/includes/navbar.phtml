@@ -26,13 +26,19 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="<?=App::config('url');?>worker/index">Employees</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?=App::config('url');?>shift/index">Shifts</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Shift
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="<?=App::config('url');?>shift/index">Shifts</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="<?=App::config('url');?>workershift/index">Workers on Shifts</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?=App::config('url');?>workershift/index">Worker-Shifts</a>
-                            </li>
-
 
 
                             <?php else: ?>

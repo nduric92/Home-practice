@@ -1,2 +1,5 @@
 
 <h5 style="color:white;"> &copy; <?=App::config('nameApp');?> <?php echo date('Y'); ?>  
+<?php if(App::dev()): ?>
+    <span style="color: red">DEV instance</span>
+    <?php endif;?>
