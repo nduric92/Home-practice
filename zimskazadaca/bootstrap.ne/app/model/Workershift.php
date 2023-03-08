@@ -1,6 +1,6 @@
 <?php
 
-class WorkerShift{
+class Workershift{
     
     public static function read()
     {
