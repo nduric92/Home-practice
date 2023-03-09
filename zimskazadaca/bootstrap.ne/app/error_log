@@ -1,0 +1,30 @@
+[07-Mar-2023 11:39:57 Europe/Zagreb] PHP Fatal error:  Uncaught Error: Class "WorkerShift" not found in /home/persefona/public_html/app/controller/WorkershiftController.php:13
+Stack trace:
+#0 /home/persefona/public_html/app/core/App.php(39): WorkershiftController->index()
+#1 /home/persefona/public_html/index.php(32): App::start()
+#2 {main}
+  thrown in /home/persefona/public_html/app/controller/WorkershiftController.php on line 13
+[07-Mar-2023 11:40:09 Europe/Zagreb] PHP Fatal error:  Uncaught Error: Class "WorkerShift" not found in /home/persefona/public_html/app/controller/WorkershiftController.php:13
+Stack trace:
+#0 /home/persefona/public_html/app/core/App.php(39): WorkershiftController->index()
+#1 /home/persefona/public_html/index.php(32): App::start()
+#2 {main}
+  thrown in /home/persefona/public_html/app/controller/WorkershiftController.php on line 13
+[07-Mar-2023 11:40:26 Europe/Zagreb] PHP Fatal error:  Uncaught Error: Class "WorkerShift" not found in /home/persefona/public_html/app/controller/WorkershiftController.php:13
+Stack trace:
+#0 /home/persefona/public_html/app/core/App.php(39): WorkershiftController->index()
+#1 /home/persefona/public_html/index.php(32): App::start()
+#2 {main}
+  thrown in /home/persefona/public_html/app/controller/WorkershiftController.php on line 13
+[07-Mar-2023 11:40:44 Europe/Zagreb] PHP Fatal error:  Uncaught Error: Class "WorkerShift" not found in /home/persefona/public_html/app/controller/WorkershiftController.php:13
+Stack trace:
+#0 /home/persefona/public_html/app/core/App.php(39): WorkershiftController->index()
+#1 /home/persefona/public_html/index.php(32): App::start()
+#2 {main}
+  thrown in /home/persefona/public_html/app/controller/WorkershiftController.php on line 13
+[07-Mar-2023 11:42:31 Europe/Zagreb] PHP Fatal error:  Uncaught Error: Class "WorkerShift" not found in /home/persefona/public_html/app/controller/WorkershiftController.php:13
+Stack trace:
+#0 /home/persefona/public_html/app/core/App.php(39): WorkershiftController->index()
+#1 /home/persefona/public_html/index.php(32): App::start()
+#2 {main}
+  thrown in /home/persefona/public_html/app/controller/WorkershiftController.php on line 13
