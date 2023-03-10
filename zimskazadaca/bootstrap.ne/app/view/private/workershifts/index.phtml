@@ -17,7 +17,10 @@
                     <td><?=$d->ime?> <?=$d->prezime?></td>
                     <td><?=$d->smjena?></td>
                     <td>
-                        <a href="change?id=<?=$d->id?>">Update</a>
+                        <a href="change?id=<?=$d->id?>">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash3-fill"></i>
+                        </a>
                     </td>
                 </tr>
             <?php endforeach;?>
