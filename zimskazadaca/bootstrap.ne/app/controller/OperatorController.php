@@ -17,7 +17,8 @@ class OperatorController extends AdminController
 
 
         $this->view->render($this->viewPath . 'index',[
-            'data'=>$operators
+            'data'=>$operators,
+            'css'=>'operator.css'
         ]);
     }
 

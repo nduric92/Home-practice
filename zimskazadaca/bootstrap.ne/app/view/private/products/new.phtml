@@ -1,0 +1,55 @@
+<form action="" method="post">
+    <fieldset>
+        <legend>Insert New Product</legend>
+
+        
+
+
+        <form>
+            <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">Product name</label>
+                <div class="col-sm-10">
+                <input type="text" name="name" class="form-control" id="name" value="<?=$e->name?>">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="color" class="col-sm-2 col-form-label">Color</label>
+                <div class="col-sm-10">
+                <input type="text" name="color" class="form-control" id="color" value="<?=$e->color?>">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="price" class="col-sm-2 col-form-label">Price</label>
+                <div class="col-sm-10">
+                <input type="text" name="price" class="form-control" id="price" value="<?=$e->price?>">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="customer" class="col-sm-2 col-form-label">Customer</label>
+                <div class="col-sm-10">
+                <input type="text" name="customer" class="form-control" id="customer" value="<?=$e->customer?>">
+                </div>
+            </div>
+            
+            
+            
+        
+
+        <hr>
+        <?=$message?>
+
+        <div class="grid-x grid-padding-x">
+            <div class="large-6 cell">
+                <a href="<?=App::config('url')?>product/index"
+                class="button alert expanded">Abort</a>
+            </div>
+            <div class="large-6 cell">
+                <input type="submit" class="button success expanded" 
+                value="add">
+            </div>
+        </div>
+        
+        
+
+    </fieldset>
+</form>

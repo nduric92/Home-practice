@@ -17,7 +17,8 @@ class ShiftController extends AdminController
 
 
         $this->view->render($this->viewPath . 'index',[
-            'data'=>$shifts
+            'data'=>$shifts,
+            'css'=>'shift.css'
         ]);
     }
 

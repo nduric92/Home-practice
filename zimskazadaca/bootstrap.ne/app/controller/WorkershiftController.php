@@ -17,7 +17,8 @@ class WorkershiftController extends AdminController
 
 
         $this->view->render($this->viewPath . 'index',[
-            'data'=>$workershifts
+            'data'=>$workershifts,
+            'css'=>'wshift.css'
         ]);
     }
 

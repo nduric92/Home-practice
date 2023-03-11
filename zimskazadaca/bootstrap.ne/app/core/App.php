@@ -66,8 +66,8 @@ class App
 
     public static function operator()
     {
-        return $_SESSION['auth']->ime . ' ' . 
-                $_SESSION['auth']->prezime;
+        return $_SESSION['auth']->name . ' ' . 
+                $_SESSION['auth']->surname;
     }
 
     public static function admin()

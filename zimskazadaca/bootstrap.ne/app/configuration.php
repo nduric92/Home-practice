@@ -6,6 +6,7 @@ if($dev)
 {
     return [
         'dev'=> $dev,
+        'formatNumber'=>'###,##0.00',
         'url'=>'http://bootstrap.ne/',
         'nameApp'=>'Production',
         'base'=>[
@@ -17,6 +18,7 @@ if($dev)
 }else{
     return [
         'dev'=> $dev,
+        'formatNumber'=>'###,##0.00',
         'url'=>'https://polaznik24.edunova.hr/',
         'nameApp'=>'Production',
         'base'=>[

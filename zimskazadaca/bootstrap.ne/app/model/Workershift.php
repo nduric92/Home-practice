@@ -6,10 +6,10 @@ class Workershift{
     {
         $conection = DB::getInstance();
         $expression = $conection->prepare('
-        select a.ime, a.prezime, b.naziv as smjena
-        from radnik a
-        inner join radnik_smjena rs on a.id = rs.radnik 
-        inner join smjena b on b.id = rs.smjena 
+        select a.name, a.surname, b.name as shift
+        from worker a
+        inner join worker_shift rs on a.id = rs.worker 
+        inner join shift b on b.id = rs.shift 
         order by b.id;
         ');
         $expression->execute();

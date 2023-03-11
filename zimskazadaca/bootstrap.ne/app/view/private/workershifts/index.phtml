@@ -14,8 +14,8 @@
         <tbody>
             <?php foreach($data as $d):?>
                 <tr>
-                    <td><?=$d->ime?> <?=$d->prezime?></td>
-                    <td><?=$d->smjena?></td>
+                    <td><?=$d->name?> <?=$d->surname?></td>
+                    <td><?=$d->shift?></td>
                     <td>
                         <a href="change?id=<?=$d->id?>">
                             <i class="bi bi-pencil-square"></i>

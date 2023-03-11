@@ -14,13 +14,11 @@
         <tbody>
             <?php foreach($data as $d):?>
                 <tr>
-                    <td><?=$d->naziv?></td>
-                    <td><?=$d->trajanje?></td>
+                    <td><?=$d->name?></td>
+                    <td><?=$d->duration?></td>
                     <td>
-                        <a href="change?id=<?=$d->id?>">
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
+                        <a href="<?=App::config('url')?>shift/update<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+                        <a href=""><i class="bi bi-trash3-fill"></i></a>
                     </td>
                 </tr>
             <?php endforeach;?>

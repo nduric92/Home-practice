@@ -4,73 +4,73 @@ use proizvodnja;
 
 # c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8mb4 < C:\Users\djuki\Documents\GitHub\Home-practice\zimskazadaca\bootstrap.ne\proizvodnja.sql
 
-alter database persefona_proizvodnja charset utf8mb4;
+#alter database persefona_proizvodnja charset utf8mb4;
 
-create table operater(
+create table operator(
     id int not null primary key auto_increment,
-    ime varchar(50) not null,
-    prezime varchar (50) not null,
+    name varchar(50) not null,
+    surname varchar (50) not null,
     email varchar(50) not null,
     password char (61) not null,
     role varchar(20) not null
 );
 
-insert into operater (ime,prezime,email,password,role)
+insert into operator (name,surname,email,password,role)
 values ('Nemanja','Duric','operater@oper.com',
 '$2a$12$724E72m8fTBgl8EaMh31fObUiVMXUtKvgDuWE/XZ41QtX7VAw/tna','oper');
 
-insert into operater (ime,prezime,email,password,role)
+insert into operator (name,surname,email,password,role)
 values ('Adam','Adamovic','adam@admin.com',
 '$2a$12$daOIhiFEtalKWbMW/WfpkOs0DfmsJkpL2SxAwa5dcgj8jpP4.ZbPS','admin');
 
-create table radnik(
+create table worker(
     id int not null primary key auto_increment,
-    ime varchar(50) not null,
-    prezime varchar(50) not null,
+    name varchar(50) not null,
+    surname varchar(50) not null,
     oib char (11),
-    brojugovora varchar(50),
+    contractnumber varchar(50),
     iban varchar(50)
 );
 
-create table smjena(
+create table shift(
     id int not null primary key auto_increment,
-    naziv varchar(50),
-    trajanje decimal(18,2)    
+    name varchar(50),
+    duration decimal(18,2)    
 );
 
-create table radnik_smjena(
+create table worker_shift(
     id int not null primary key auto_increment,
-    radnik int,
-    smjena int
+    worker int,
+    shift int
 );
 
-create table radnik_smjena_proizvod(
-    radnik_smjena int,
-    proizvod int,
-    kolicina int
+create table worker_shift_product(
+    worker_shift int,
+    product int,
+    amount int
 );
 
-create table proizvod(
+create table product(
     id int not null primary key auto_increment,
-    naziv varchar(50) not null,
-    boja varchar(50),
-    cijena decimal(18,2),
-    narucitelj varchar(50)
+    name varchar(50) not null,
+    color varchar(50),
+    price decimal(18,2),
+    customer varchar(50)
 );
 
 
 #poveznice izmedju tablica
 
-alter table radnik_smjena add foreign key (radnik) references radnik(id);
-alter table radnik_smjena add foreign key (smjena) references smjena(id);
+alter table worker_shift add foreign key (worker) references worker(id);
+alter table worker_shift add foreign key (shift) references shift(id);
 
-alter table radnik_smjena_proizvod add foreign key (radnik_smjena) references radnik_smjena(id);
-alter table radnik_smjena_proizvod add foreign key (proizvod) references proizvod(id);
+alter table worker_shift_product add foreign key (worker_shift) references worker_shift(id);
+alter table worker_shift_product add foreign key (product) references product(id);
 
 #inserti u tablice
 #radnik
 
-insert into radnik (ime,prezime)
+insert into worker (name,surname)
 values
 ('Igor','Đorđević'),
 ('Nemanja','Đurić'),
@@ -98,14 +98,14 @@ values
 ('Matej','Vujičić');
 
 #smjena
-insert into smjena (naziv)
+insert into shift (name)
 values 
 ('AdrianS'),    #1
 ('TobiasS'),    #2
 ('RonnyS');     #3
 
-#radnik_smjena
-insert into radnik_smjena(radnik,smjena)
+#worker_smjena
+insert into worker_shift(worker,shift)
 values
 (1,1),
 (2,2),
@@ -133,55 +133,55 @@ values
 (24,2);
 
 #proizvod
-insert into proizvod (naziv,boja)
+insert into product (name,color)
 values
-('VME 128','Siva'),
-('VME 124','Siva'),
-('VME 248','Zuta'),
-('VME 202','Siva'),
-('VME 186','Siva'),
-('VME 321','Siva'),
-('VME 320','Siva'),
-('VME 420','Crna'),
-('VME 421','Crna'),
-('VME 160','Siva'),
-('VME 154','Zuta'),
-('VME 386','Crvena'),
-('VME 212','Zuta'),
-('VME 214','Siva'),
-('VME 315','Zuta'),
-('VME 314','Siva'),
-('VME 317','Crvena'),
-('VME 318','Siva'),
-('VME 140','Bijela'),
-('VME 195','Bijela'),
-('VME 196','Crna'),
-('VME 197','Siva'),
-('VME 198','Siva'),
-('VME 201','Zuta'),
-('VME 440','Zuta'),
-('VME 441','Zuta'),
-('VME 442','Siva'),
-('VME 443','Crna'),
-('VME 444','Siva'),
-('VME 459','Siva'),
-('VME 460','Crna'),
-('VME 120','Siva'),
-('VME 118','Siva'),
-('VME 048','Crna'),
-('VME 050','Crna'),
-('NIBE 030','Siva'),
-('NIBE 330','Siva'),
-('NIBE 331','Siva'),
-('NIBE 430','Siva'),
-('NIBE 431','Siva'),
-('NIBE 040','Siva'),
-('NIBE 310','Siva'),
-('PAXTER 031','Crvena'),
-('PAXTER 032','Bijela'),
-('PAXTER 033','Crvena2'),
+('VME 128','Gray'),
+('VME 124','Gray'),
+('VME 248','Yellow'),
+('VME 202','Gray'),
+('VME 186','Gray'),
+('VME 321','Gray'),
+('VME 320','Gray'),
+('VME 420','Black'),
+('VME 421','Black'),
+('VME 160','Gray'),
+('VME 154','Yellow'),
+('VME 386','Red'),
+('VME 212','Yellow'),
+('VME 214','Gray'),
+('VME 315','Yellow'),
+('VME 314','Gray'),
+('VME 317','Red'),
+('VME 318','Gray'),
+('VME 140','White'),
+('VME 195','White'),
+('VME 196','Black'),
+('VME 197','Gray'),
+('VME 198','Gray'),
+('VME 201','Yellow'),
+('VME 440','Yellow'),
+('VME 441','Yellow'),
+('VME 442','Gray'),
+('VME 443','Black'),
+('VME 444','Gray'),
+('VME 459','Gray'),
+('VME 460','Black'),
+('VME 120','Gray'),
+('VME 118','Gray'),
+('VME 048','Black'),
+('VME 050','Black'),
+('NIBE 030','Gray'),
+('NIBE 330','Gray'),
+('NIBE 331','Gray'),
+('NIBE 430','Gray'),
+('NIBE 431','Gray'),
+('NIBE 040','Gray'),
+('NIBE 310','Gray'),
+('PAXTER 031','Red'),
+('PAXTER 032','White'),
+('PAXTER 033','Red2'),
 ('PAXTER 041','Crvena'),
-('PAXTER 042','Bijela'),
-('PAXTER 043','Crvena2');
+('PAXTER 042','White'),
+('PAXTER 043','Red2');
 
 #ostao insert na tablicu radnik_smjena_proizvod

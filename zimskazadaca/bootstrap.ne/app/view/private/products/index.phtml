@@ -1,5 +1,5 @@
 <h3 class="display-3">Products</h3>
-<a href="new"><button type="button" class="btn btn-outline-primary btn-lg">Add new product</button></a>
+<a href="<?=App::config('url')?>product/new"><button type="button" class="btn btn-outline-primary btn-lg">Add new product</button></a>
 <br>
 ***
 <div class="card">
@@ -9,7 +9,7 @@
             <th scope="col">Name</th>
             <th scope="col">Color</th>
             <?php if(App::admin()): ?>
-            <th scope="col">Price</th>
+            <th scope="col">Price (€)</th>
             <th scope="col">Customer</th>
             <th scope="col">Action</th>
             <?php endif; ?>
@@ -18,16 +18,14 @@
         <tbody>
             <?php foreach($data as $d):?>
                 <tr>
-                    <td><?=$d->naziv?></td>
-                    <td><?=$d->boja?></td>
+                    <td><?=$d->name?></td>
+                    <td><?=$d->color?></td>
                     <?php if(App::admin()): ?>
-                    <td><?=$d->cijena?></td>
-                    <td><?=$d->narucitelj?></td>
+                    <td><?=$d->price?></td>
+                    <td><?=$d->customer?></td>
                     <td>
-                        <a href="change?id=<?=$d->id?>">
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
+                        <a href="<?=App::config('url')?>product/update<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+                        <a href=""><i class="bi bi-trash3-fill"></i></a>
                     </td>
                     <?php endif; ?>
                 </tr>

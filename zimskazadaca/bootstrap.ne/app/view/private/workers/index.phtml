@@ -17,16 +17,14 @@
         <tbody>
             <?php foreach($data as $d):?>
                 <tr>
-                    <td><?=$d->ime?></td>
-                    <td><?=$d->prezime?></td>
+                    <td><?=$d->name?></td>
+                    <td><?=$d->surname?></td>
                     <td><?=$d->oib?></td>
-                    <td><?=$d->brojugovora?></td>
+                    <td><?=$d->contractnumber?></td>
                     <td><?=$d->iban?></td>
                     <td>
-                        <a href="change?id=<?=$d->id?>">
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
+                        <a href="<?=App::config('url')?>worker/update<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+                        <a href="change?id=<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>
                     </td>
                 </tr>
             <?php endforeach;?>

@@ -1,0 +1,17 @@
+.bi.bi-trash3-fill{
+    font-size: 20px;
+    color: red;
+}
+
+.bi.bi-pencil-square{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+thead > tr > th{
+    font-size: 20px;
+}
+
+tbody > tr > td:first-child{
+    font-weight: bold;
+}

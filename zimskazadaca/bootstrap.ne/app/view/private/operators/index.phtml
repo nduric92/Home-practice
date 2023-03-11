@@ -15,14 +15,12 @@
         <tbody>
             <?php foreach($data as $d):?>
                 <tr>
-                    <td><?=$d->ime?> <?=$d->prezime?></td>
+                    <td><?=$d->name?> <?=$d->surname?></td>
                     <td><?=$d->email?></td>
                     <td><?=$d->role?></td>
                     <td>
-                        <a href="change?id=<?=$d->id?>">
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
+                        <a href="<?=App::config('url')?>operator/update<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+                        <a href=""><i class="bi bi-trash3-fill"></i></a>
                     </td>
                 </tr>
             <?php endforeach;?>

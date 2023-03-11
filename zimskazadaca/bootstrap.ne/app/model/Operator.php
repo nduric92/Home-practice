@@ -5,7 +5,7 @@ class Operator{
     public static function read()
     {
         $conection = DB::getInstance();
-        $expression = $conection->prepare('select * from operater');
+        $expression = $conection->prepare('select * from operator');
         $expression->execute();
         return $expression->fetchAll();
     }
@@ -15,7 +15,7 @@ class Operator{
     {
         $conection = DB::getInstance();
         $expression = $conection->prepare('
-        select * from operater where email=:email
+        select * from operator where email=:email
         ');
         $expression->execute(['email'=>$email]);
 

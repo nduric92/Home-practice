@@ -17,7 +17,8 @@ class WorkerController extends AdminController
 
 
         $this->view->render($this->viewPath . 'index',[
-            'data'=>$workers
+            'data'=>$workers,
+            'css'=>'worker.css'
         ]);
     }
 
