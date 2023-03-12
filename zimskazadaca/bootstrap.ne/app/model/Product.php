@@ -40,6 +40,20 @@ class Product{
         $expression->execute($parameters);
     }
 
+    public static function update($parameters)
+    {
+        $base = DB::getInstance();
+        $expression = $conection->prepare('
+        
+            update product set
+            name=:name,
+            color=:color,
+            price=:price,
+            customer=:customer
+        ');
+        $expression->execute($parameters);
+    }
+
     public static function sameName($s)
     {
         $conection = DB::getInstance();

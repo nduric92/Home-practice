@@ -51,6 +51,61 @@ class ProductController extends AuthorizationController
         ]);
     }
 
+
+    public function update($id='')
+    {
+        if($_SERVER['REQUEST_METHOD']==='GET'){
+            if(strlen(trim($id))===0){
+                header('location: ' . App::config('url') . 'index/logout');
+                return;
+            }
+
+            $id=(int)$id;
+            if($id===0){
+                header('location: ' . App::config('url') . 'index/logout');
+                return;
+            }
+
+            $this->e = Product::readOne($id);
+
+            if($this->e==null){
+                header('location: ' . App::config('url') . 'index/logout');
+                return;
+            }
+
+            $this->e->price=$this->nf->format($this->e->price);
+
+            $this->view->render($this->viewPath . 
+            'update',[
+                'e'=>$this->e,
+                'message'=>'Change data'
+            ]);  
+            return;
+        }
+
+        // ovdje je POST
+        $this->prepareView();
+        if(!$this->controllUpdate()){// kontrolirati podatke, ako nešto ne valja vratiti na view s porukom 
+            $this->view->render($this->viewPath . 
+            'update',[
+                'e'=>$this->e,
+                'message'=>$this->message
+            ]);  
+         return;
+        }
+
+        $this->e->id=$id;
+        $this->prepareBase(); // priprema za bazu
+        Product::update((array)$this->e);
+        $this->view->render($this->viewPath . 
+        'update',[
+            'e'=>$this->e,
+            'message'=>'Succesfully updated'
+        ]);  
+
+
+    }
+
     private function callView($parameters)
     {
         $this->view->render($this->viewPath . 
@@ -86,13 +141,13 @@ class ProductController extends AuthorizationController
         }
 
         if(strlen(trim($s))>50){
-            $this->poruka='The name must be less than 50 characters';
+            $this->message='The name must be less than 50 characters';
             return false;
         }
 
 
         if(Product::sameName($s)){
-            $this->massage='Name already exists in base';
+            $this->message='Name already exists in base';
             return false; 
         }
 
@@ -109,7 +164,7 @@ class ProductController extends AuthorizationController
 
         $price = $this->nf->parse($this->e->price);        
         if(!$price){
-            $this->message='The price is not in good format';
+            $this->message='The price is not in good format (xx.xx)';
             return false;
         }
 
@@ -162,14 +217,4 @@ class ProductController extends AuthorizationController
         }
         return $this->nf->format($number);
     }
-
-
-
-
-
-
-
-
-
-
 }
