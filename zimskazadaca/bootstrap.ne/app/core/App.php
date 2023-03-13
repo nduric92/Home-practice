@@ -8,8 +8,6 @@ class App
         $route = Request::getRoute();
 
         $parts = explode('/',substr($route,1));
-        //Log::info($parts);//progress follow
-
         
         $controller='';
         if(!isset($parts[0]) || $parts[0]==='')
@@ -18,8 +16,6 @@ class App
         }else{
             $controller = ucfirst($parts[0]) . 'Controller';
         }
-        //Log::info($controller);//progress follow
-
 
         $method='';
         if(!isset($parts[1]) || $parts[1]==='')
@@ -29,6 +25,13 @@ class App
             $method = $parts[1];
         }
 
+        $parameter='';
+        if(!isset($parts[2]) || $parts[2]===''){
+            $parameter='';
+        }else{
+            $parameter=$parts[2];
+        }
+
         if(!(class_exists($controller) && method_exists($controller,$method)))
         {
             echo 'Not exists ' . $controller . '-&gt;' . $method;
@@ -36,8 +39,11 @@ class App
         }
 
         $instance = new $controller();
-        $instance->$method();
-
+        if(strlen($parameter)>0){
+            $instance->$method($parameter);
+        }else{
+            $instance->$method();
+        }
     }
 
     public static function config($key)

@@ -52,7 +52,7 @@ class ProductController extends AuthorizationController
     }
 
 
-    public function update($id='')
+    public function change($id='')
     {
         if($_SERVER['REQUEST_METHOD']==='GET'){
             if(strlen(trim($id))===0){
@@ -76,18 +76,18 @@ class ProductController extends AuthorizationController
             $this->e->price=$this->nf->format($this->e->price);
 
             $this->view->render($this->viewPath . 
-            'update',[
+            'change',[
                 'e'=>$this->e,
-                'message'=>'Change data'
+                'message'=>''
             ]);  
             return;
         }
 
         // ovdje je POST
         $this->prepareView();
-        if(!$this->controllUpdate()){// kontrolirati podatke, ako nešto ne valja vratiti na view s porukom 
+        if(!$this->controllChange()){// kontrolirati podatke, ako nešto ne valja vratiti na view s porukom 
             $this->view->render($this->viewPath . 
-            'update',[
+            'change',[
                 'e'=>$this->e,
                 'message'=>$this->message
             ]);  
@@ -98,7 +98,7 @@ class ProductController extends AuthorizationController
         $this->prepareBase(); // priprema za bazu
         Product::update((array)$this->e);
         $this->view->render($this->viewPath . 
-        'update',[
+        'change',[
             'e'=>$this->e,
             'message'=>'Succesfully updated'
         ]);  
@@ -127,7 +127,7 @@ class ProductController extends AuthorizationController
         return $this->controllName() && $this->controllPrice();
     }
 
-    private function controllUpdate()
+    private function controllChange()
     {
         return  $this->controllPrice();
     }

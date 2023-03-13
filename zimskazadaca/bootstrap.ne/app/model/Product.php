@@ -42,7 +42,7 @@ class Product{
 
     public static function update($parameters)
     {
-        $base = DB::getInstance();
+        $conection = DB::getInstance();
         $expression = $conection->prepare('
         
             update product set
@@ -50,6 +50,7 @@ class Product{
             color=:color,
             price=:price,
             customer=:customer
+            where id=:id
         ');
         $expression->execute($parameters);
     }
@@ -68,7 +69,6 @@ class Product{
         ]);
         $id=$expression->fetchColumn();
         return $id>0;
-    }
-    
+    }    
     
 }
