@@ -13,7 +13,7 @@ class ProductController extends AuthorizationController
     public function __construct()
     {
         parent::__construct();
-        $this->nf = new NumberFormatter('en-HR', NumberFormatter::DECIMAL);
+        $this->nf = new NumberFormatter('hr-HR', NumberFormatter::DECIMAL);
         $this->nf->setPattern(App::config('formatNumber'));
     }
 
