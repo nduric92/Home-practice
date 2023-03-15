@@ -54,10 +54,8 @@ class Operator{
         $conection = DB::getInstance();
         $expression = $conection->prepare('
         
-            insert into operator(name,surname,email,password,
-            role) values
-            (:name,:surname,:email,
-            :password,:role);
+            insert into operator(name,surname,email,password,role)
+            values (:name,:surname,:email,:password,:role);
         
         ');
         $expression->execute($parameters);

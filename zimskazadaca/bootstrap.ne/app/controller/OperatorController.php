@@ -58,11 +58,6 @@ class OperatorController extends AdminController
         $this->e = (object)$_POST;
     }
 
-    private function prepareBase()
-    {
-        $this->e->email;
-    }
-
     private function controllName()
     {
         $s = $this->e->name;
