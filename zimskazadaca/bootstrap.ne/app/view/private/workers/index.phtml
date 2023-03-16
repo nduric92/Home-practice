@@ -2,35 +2,24 @@
 <a href="new"><button type="button" class="btn btn-outline-primary btn-lg">Add new employee</button></a>
 <br>
 ***
-<div class="card">
-    <table class="table table-striped">
-    <thead>
-        <tr class="table-warning">
-            <th scope="col">Name</th>
-            <th scope="col">Surname</th>
-            <th scope="col">oib</th>
-            <th scope="col">Contract</th>
-            <th scope="col">IBAN</th>
-            <th scope="col">Action</th>
-        </tr>
-    </thead>
-        <tbody>
-            <?php foreach($data as $d):?>
-                <tr>
-                    <td><?=$d->name?></td>
-                    <td><?=$d->surname?></td>
-                    <td><?=$d->oib?></td>
-                    <td><?=$d->contractnumber?></td>
-                    <td><?=$d->iban?></td>
-                    <td>
+<hr>
 
-                        <a href="<?=App::config('url')?>worker/change/<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
-                        <a onclick="return confirm('Delete employee <?=$d->name?> <?=$d->surname?>?');"
-                        href="<?=App::config('url')?>worker/delete/<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>
+<div class="row">
+<?php foreach($data as $d): ?>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+            <h2><?=$d->name?></h2>
+            <h2><?=$d->surname?></h2>
+            <h5>OIB: <?=$d->oib?></h5>
+            <h5>Contract: <?=$d->contractnumber?></h5>
+            <h5>IBAN: <?=$d->iban?></h5>
 
-                    </td>
-                </tr>
-            <?php endforeach;?>
-        </tbody>
-    </table>
+            <a href="<?=App::config('url')?>worker/change/<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+            <a onclick="return confirm('Delete employee <?=$d->name?> <?=$d->surname?>?');"
+            href="<?=App::config('url')?>worker/delete/<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>
+      </div>
+    </div>
+  </div>
+  <?php endforeach;?>
 </div>
