@@ -13,14 +13,8 @@ class WorkerController extends AdminController
     public function index()
     {
 
-        $workers = Worker::read();
-        foreach($workers as $w){
-            unset($w->password);
-        }
-
-
         $this->view->render($this->viewPath . 'index',[
-            'data'=>$workers,
+            'data'=>$this->adjustData(Worker::read()),
             'css'=>'worker.css'
         ]);
     }
@@ -178,6 +172,31 @@ class WorkerController extends AdminController
         }
         Worker::delete($id);
         header('location: ' . App::config('url') . 'worker/index');
+    }
+
+    private function adjustData($workers)
+    {
+        foreach($workers as $w)
+        {
+            if(strlen($w->name)>25){
+                $w->name = substr($p->name,0,23) . '...';
+            }
+            $w->title=$w->oib;
+            if($w->oib==null){
+                $w->oib = 'Not set';
+            }
+
+            $w->title=$w->contractnumber;
+            if($w->contractnumber==null){
+                $w->contractnumber = 'Not set';
+            }
+
+            $w->title=$w->iban;
+            if($w->iban==null){
+                $w->iban = 'Not set';
+            }
+        }
+        return $workers;
     }
 
 }
