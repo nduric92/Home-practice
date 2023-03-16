@@ -1,0 +1,60 @@
+<legend>Change Employee</legend>
+
+<form action="" method="post">
+    
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control"  id="name" value="<?=$e->name?>">
+    </div>
+
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" class="form-control"  id="surname" value="<?=$e->surname?>">
+    </div>
+
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="oib">Oib</label>
+        <input type="text" class="form-control" value="<?=$e->oib?>" name="oib" id="oib">
+    </div>
+
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="contractnumber">Contractnumber</label>
+        <input type="text" class="form-control" value="<?=$e->contractnumber?>" name="contractnumber" id="contractnumber">
+    </div>
+
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="iban">IBAN</label>
+        <input type="text" class="form-control" value="<?=$e->iban?>" name="iban" id="iban">
+    </div>
+
+    <?=$message?><br>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Update Employee
+    </button>
+
+    <a href="<?=App::config('url')?>worker/index">
+    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Abort
+    </button></a>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Update Employee</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Save changes!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</form>

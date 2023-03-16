@@ -22,9 +22,14 @@
                     <td><?=$d->oib?></td>
                     <td><?=$d->contractnumber?></td>
                     <td><?=$d->iban?></td>
-                    <td>
+                    <td><!--
                         <a href="<?=App::config('url')?>worker/update<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
-                        <a href="change?id=<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>
+                        <a href="change?id=<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>-->
+
+                        <a href="<?=App::config('url')?>worker/change/<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+                        <a onclick="return confirm('Delete employee <?=$d->name?> <?=$d->surname?>?');"
+                        href="<?=App::config('url')?>worker/delete/<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>
+
                     </td>
                 </tr>
             <?php endforeach;?>

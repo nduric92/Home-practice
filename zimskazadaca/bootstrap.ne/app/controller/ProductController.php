@@ -106,6 +106,16 @@ class ProductController extends AuthorizationController
 
     }
 
+    public function delete($id=0){
+        $id=(int)$id;
+        if($id===0){
+            header('location: ' . App::config('url') . 'index/logout');
+            return;
+        }
+        Product::delete($id);
+        header('location: ' . App::config('url') . 'product/index');
+    }
+
     private function callView($parameters)
     {
         $this->view->render($this->viewPath . 

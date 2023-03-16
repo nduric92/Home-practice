@@ -69,6 +69,21 @@ class Product{
         ]);
         $id=$expression->fetchColumn();
         return $id>0;
-    }    
+    } 
+    
+    public static function delete($id)
+    {
+        $conection = DB::getInstance();
+        $expression = $conection->prepare('
+        
+            delete from product
+            where id=:id
+        
+        ');
+        $expression->execute([
+            'id'=>$id
+        ]);
+        $expression->execute();
+    }
     
 }

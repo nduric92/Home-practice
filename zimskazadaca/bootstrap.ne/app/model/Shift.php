@@ -9,7 +9,5 @@ class Shift{
         $expression->execute();
         return $expression->fetchAll();
     }
-
-    
-    
+   
 }
