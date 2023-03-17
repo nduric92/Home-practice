@@ -1,4 +1,4 @@
-<legend>Insert New Product</legend>
+<legend>Insert New Operator</legend>
 
 <form action="" method="post">
     
@@ -16,17 +16,22 @@
         <label for="email">Email</label>
         <input type="text" class="form-control" value="<?=$e->email?>" name="email" id="email">
     </div>
+<!--
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" value="<?=$e->password?>" name="password" id="password">
+    </div>
 
     <div class="mb-3 row" style="max-width:400px; margin: auto;">
         <label for="role">Role</label>
         <input type="text" class="form-control" value="<?=$e->role?>" name="role" id="role">
     </div>
-
+-->
     <div class="mb-3 row" style="max-width:400px; margin: auto;">
         <label for="role">Role</label>    
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
-            <option selected>Operater</option>
-            <option value="1">Administrator</option>
+            <option selected value="oper" <?php if($e->role) ; ?>>Operater</option>
+            <option value="admin">Administrator</option>
         </select>
     </div>
     

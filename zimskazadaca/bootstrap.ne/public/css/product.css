@@ -20,6 +20,14 @@ tbody > tr > td:first-child{
     font-weight: bold;
     }
 
-    tbody > tr > td:nth-child(3){
-        text-align: right;
-    }
+tbody > tr > td:nth-child(3){
+    text-align: right;
+}
+
+.card-body{
+    margin-top: 20px;
+}
+
+.col-lg-3{
+    margin-top: 10px;
+}
