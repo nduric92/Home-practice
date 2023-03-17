@@ -214,7 +214,7 @@ class ProductController extends AuthorizationController
             $p->price=$this->formatPrice($p->price);
             $p->title=$p->customer;
             if($p->customer==null){
-                $p->customer = 'Customer not set';
+                $p->customer = 'Not set';
             }
         }
         return $products;
