@@ -5,7 +5,18 @@ class Shift{
     public static function read()
     {
         $conection = DB::getInstance();
-        $expression = $conection->prepare('select * from shift');
+        $expression = $conection->prepare('
+        select 	a.id,
+                a.name,
+                a.duration,
+                count(b.id) as employees 
+        from shift a
+        left join worker_shift b on a.id = b.shift 
+        group by 	a.id,
+                    a.name,
+                    a.duration 
+        order by a.name asc;
+        ');
         $expression->execute();
         return $expression->fetchAll();
     }

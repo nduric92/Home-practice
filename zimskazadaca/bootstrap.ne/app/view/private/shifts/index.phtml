@@ -18,8 +18,13 @@
                     <td><?=$d->duration?></td>
                     <td>
                         <a href="<?=App::config('url')?>shift/change/<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+                        <?php if($d->employees==0): ?>
                         <a onclick="return confirm('Delete <?=$d->name?> shift ?');"
                         href="<?=App::config('url')?>shift/delete/<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>
+                        <?php else: ?>
+                    <i title="Can not delete - Employees on shift" 
+                    class="bi bi-trash3-fill" style="color: gray"></i>
+                <?php endif; ?>
                     </td>
                 </tr>
             <?php endforeach;?>

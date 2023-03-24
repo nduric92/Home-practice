@@ -1,5 +1,5 @@
 <h3 class="display-3">Employees on Shifts</h3>
-<a href="new"><button type="button" class="btn btn-outline-primary btn-lg">Add new</button></a>
+<a href="<?=App::config('url')?>workershift/new"><button type="button" class="btn btn-outline-primary btn-lg">Add new</button></a>
 <br>
 ***
 <div class="card">
@@ -17,8 +17,15 @@
                     <td><?=$d->name?> <?=$d->surname?></td>
                     <td><?=$d->shift?></td>
                     <td>
-                        <a href="<?=App::config('url')?>workershift/update<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
-                        <a href=""><i class="bi bi-trash3-fill"></i></a>
+                        <a href="<?=App::config('url')?>workershift/update/<?=$d->id?>"><i class="bi bi-pencil-square"></i></a>
+                        <?php if($d): ?>
+
+                        <a onclick="return confirm('Delete employee <?=$d->name?> <?=$d->surname?>?');"
+                        href="<?=App::config('url')?>workershift/delete/<?=$d->id?>"><i class="bi bi-trash3-fill"></i></a>
+                        <?php else: ?>
+                            <i title="Can not delete" 
+                            class="bi bi-trash3-fill" style="color: gray"></i>
+                    <?php endif; ?>
                     </td>
                 </tr>
             <?php endforeach;?>
