@@ -1,0 +1,35 @@
+
+
+
+<div class="mb-3 row" style="max-width:400px; margin: auto;">
+    <label for="shift">shift</label>
+    <select name="shift" id="shift">
+        <?php foreach($shifts as $shift): ?>
+            <option 
+            <?php if($shift->id==$e->shift){
+                echo ' selected="selected" ';
+            } ?>
+            value="<?=$shift->id?>">
+                <?=$shift->name?>
+            </option>
+        <?php endforeach;?>
+    </select>
+</div>
+
+
+
+    
+
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="amount">Amount</label>
+        <input type="text" class="form-control" value="<?=$e->amount?>" name="amount" id="amount">
+    </div>
+
+
+    <div class="mb-3 row" style="max-width:400px; margin: auto;">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" value="<?=$e->date?>" name="date" id="date">
+    </div>
+
+<?php echo App::inputText('maksimalnopolaznika',$e->maksimalnopolaznika); ?>
+

@@ -14,30 +14,41 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?=App::config('url');?>dashboard/index">Overview</a>
                         </li>
-                        <li class="nav-item">                                
-                            <a class="nav-link" href="<?=App::config('url');?>product/index">Products</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Production
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li class="nav-item">                                
+                                <a class="nav-link" href="<?=App::config('url');?>product/index">Products</a>
+                            </li>
+                            <li class="nav-item">                                
+                                <a class="nav-link" href="<?=App::config('url');?>cycle/index">Cycle</a>
+                            </li>
+                            </ul>
                         </li>
                         
-                        
                         <?php if(App::admin()): ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?=App::config('url');?>operator/index">Operators</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?=App::config('url');?>worker/index">Employees</a>
-                            </li>
+                            
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Shift
+                                    Production details
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
                                         <a class="nav-link" href="<?=App::config('url');?>shift/index">Shifts</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?=App::config('url');?>workershift/index">Workers on Shifts</a>
+                                        <a class="nav-link" href="<?=App::config('url');?>workershift/index">Employees on Shifts</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="<?=App::config('url');?>worker/index">Employees</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?=App::config('url');?>operator/index">Operators</a>
                             </li>
 
 

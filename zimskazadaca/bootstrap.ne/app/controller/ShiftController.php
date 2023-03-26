@@ -103,7 +103,7 @@ class ShiftController extends AdminController
                 $s->name = substr($s->name,0,23) . '...';
             }
             $s->title=$s->duration;
-            if($s->duration==null){
+            if($s->duration==null || $s->duration==0){
                 $s->duration = 'Not set';
             }
         }

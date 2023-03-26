@@ -47,7 +47,8 @@ create table worker_shift(
 create table worker_shift_product(
     worker_shift int,
     product int,
-    amount int
+    amount int,
+    date date
 );
 
 create table product(
@@ -185,3 +186,16 @@ values
 ('PAXTER 043','Red2');
 
 #ostao insert na tablicu radnik_smjena_proizvod
+
+insert into worker_shift_product(worker_shift,product,amount,date)
+values
+(1,1,40,'2022.08.14'),
+(2,2,40,'2022.08.16'),
+(5,2,40,'2022.08.10'),
+(7,4,40,'2022.09.14'),
+(5,5,40,'2022.10.14'),
+(2,8,40,'2022.11.14'),
+(12,11,40,'2022.11.15'),
+(11,10,40,'2022.11.18'),
+(21,6,40,'2022.11.20'),
+(22,3,40,'2022.12.14');

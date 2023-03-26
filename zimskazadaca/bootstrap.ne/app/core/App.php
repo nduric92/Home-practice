@@ -31,10 +31,14 @@ class App
         }else{
             $parameter=$parts[2];
         }
-
+        
         if(!(class_exists($controller) && method_exists($controller,$method)))
         {
-            echo 'Not exists ' . $controller . '-&gt;' . $method;
+            $v = new View();
+            $v->render('notFoundController',[
+                'message'=>'Not exists ' . $controller . '-&gt;' . $method
+            ]);
+            //echo 'Not exists ' . $controller . '-&gt;' . $method;
             return;
         }
 
