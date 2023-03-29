@@ -11,7 +11,7 @@ class Cycle{
                 b.name as shift, 
                 c.name as product,
                 wsp.amount, 
-                wsp.`date` 
+                wsp.date 
         from worker a
         inner join worker_shift ws on a.id = ws.worker 
         inner join shift b on b.id = ws.shift
@@ -23,7 +23,7 @@ class Cycle{
                 b.name, 
                 c.name,
                 wsp.amount, 
-                wsp.`date`
+                wsp.date
         order by date desc;
         ');
         $expression->execute();
