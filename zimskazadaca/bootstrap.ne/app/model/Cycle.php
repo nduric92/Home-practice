@@ -6,9 +6,7 @@ class Cycle{
     {
         $conection = DB::getInstance();
         $expression = $conection->prepare('
-        select  a.name, 
-                a.surname, 
-                b.name as shift, 
+        select  concat(a.name,\' \', a.surname) as name,
                 c.name as product,
                 wsp.amount, 
                 wsp.date 
@@ -18,9 +16,7 @@ class Cycle{
         inner join worker_shift_product wsp on ws.id =wsp.worker_shift 
         left join product c on wsp.product = c.id
         group by 
-        a.name, a.name, 
-                a.surname, 
-                b.name, 
+        a.name, concat(a.name,\' \', a.surname), 
                 c.name,
                 wsp.amount, 
                 wsp.date
@@ -30,6 +26,69 @@ class Cycle{
         return $expression->fetchAll();
     }
 
+    public static function readOne($id)
+    {
+        $conection = DB::getInstance();
+        $expression = $conection->prepare('
+        
+            select * from worker_shift_product
+            where id=:id
+        
+        ');
+        $expression->execute([
+            'id'=>$id
+        ]);
+        $cycle = $expression->fetch();
+
+        
+
+        return $cycle;
+    }
+
+    public static function create($parameters)
+    {
+        $conection = DB::getInstance();
+        $expression = $conection->prepare('
+        
+            insert into worker_shift_product 
+            (worker_shift,product,amount,date)
+            values
+            (:worker_shift,:product,:amount,
+            :date);
+        
+        ');
+        $expression->execute($parameters);
+    }
+
+    public static function update($parameters)
+    {
+        $conection = DB::getInstance();
+        $expression = $conection->prepare('
+        
+            update worker_shift_product set
+            worker_shift=:worker_shift,
+            product=:product,
+            amount=:amount,
+            date=:date
+            where id=:id
+        
+        ');
+        $expression->execute($parameters);
+    }
     
+    public static function delete($id)
+    {
+        $conection = DB::getInstance();
+        $expression = $conection->prepare('
+        
+            delete from worker_shift_product
+            where id=:id
+        
+        ');
+        $expression->execute([
+            'id'=>$id
+        ]);
+        $expression->execute();
+    }
     
 }

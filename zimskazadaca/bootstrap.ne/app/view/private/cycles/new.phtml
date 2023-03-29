@@ -10,7 +10,18 @@
 
     <div class="mb-3 row" style="max-width:400px; margin: auto;">
         <label for="product">Product</label>
-        <input type="text" class="form-control" value="<?=$e->product?>" name="product" id="product">
+        <select class="form-select form-select-md" name="product" id="product">
+            <?php foreach($products as $product): ?>
+                <option 
+                <?php if($product->id==$e->product){
+                    echo ' selected="selected" ';
+                } ?>
+                value="<?=$product->id?>">
+                    <?=$product->name?>
+                </option>
+            <?php endforeach;?>
+        </select>
+        <!--<input type="text" class="form-control" value="<?=$e->product?>" name="product" id="product">-->
     </div>
 
     <div class="mb-3 row" style="max-width:400px; margin: auto;">
